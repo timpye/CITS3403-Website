@@ -350,4 +350,4 @@ MigrationBackup/
 .ionide/
 
 #Virutal environment folder
-env/
+venv/
