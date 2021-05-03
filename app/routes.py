@@ -1,5 +1,6 @@
 from app import app
 from flask import render_template, flash, redirect
+from app.forms import LoginForm
 from flask_login import current_user, login_user, logout_user, login_required
 
 @app.route('/')
