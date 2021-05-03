@@ -22,6 +22,6 @@ def content():
 def feedback():
     return render_template('feedback.html', title = 'Feedback')
 
-@app.route('/login'):
+@app.route('/login')
 def login():
     return render_template('login.html', title = 'Login')
