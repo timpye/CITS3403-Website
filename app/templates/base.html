@@ -6,10 +6,12 @@
     </head>
     <body>
         <a href = '/index'>Home</a>
-        <a href = '/login'>Login</a>
+        <a href="{{ url_for('login') }}">Login</a>
         <a href = '/content'>Content</a>
         <a href = '/quiz'>Quiz</a>
         <a href = '/feedback'>Feedback</a>
         <a href = '/stats'>Statistics</a>
+
+        {% block content %}{% endblock %}
     </body>
 </html>
