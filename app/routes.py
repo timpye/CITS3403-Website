@@ -1,5 +1,5 @@
 from app import app
-from flask import render_template, flash, redirect, url_for
+from flask import Flask, render_template, flash, redirect, url_for
 from app.forms import LoginForm
 from flask_login import current_user, login_user, logout_user, login_required
 from app import db
@@ -35,9 +35,58 @@ def login():
         return redirect(next_page)
     return render_template('login.html', title='Sign In', form=form)
 
+class Question:
+    q_id = -1
+    question= ""
+    op1= ""
+    op2= ""
+    op3= ""
+    op4= ""
+    correctop = -1
+
+    def __init__(self, q_id, question, op1, op2, op3, op4, correctop):
+        self.q_id = q_id
+        self.question = question
+        self.op1 = op1
+        self.op2 = op2
+        self.op3 = op3
+        self.op4 = op4
+        self.correctop = correctop
+
+    def get_correctop(self):
+        if self.correctop == 1:
+            return self.op1
+        elif self.correctop == 2:
+            return self.op2
+        elif self.correctop == 3:
+            return self.op3
+        elif self.correctop == 4:
+            return self.op4
+    
+q1 = Question(1, "Test question 1", "correct", "wrong", "wrong", "wrong", 1)
+q2 = Question(2, "Test question 2", "wrong", "correct", "wrong", "wrong", 2)
+q3 = Question(3, "Test question 2", "wrong", "wrong", "correct", "wrong", 3)
+q4 = Question(4, "Test question 2", "wrong", "wrong", "wrong", "correct", 4)
+
+q_list = [q1, q2, q3, q4]
+
 @app.route('/quiz')
 def quiz():
-    return render_template('quiz.html', title = 'Quiz')
+    return render_template('quiz.html', title = 'Quiz', q_list = q_list)
+
+@app.route("/submission", methods=['POST', 'GET'])
+def submit():
+    correct_count = 0
+    for question in q_list:
+        qid = str(question.q_id)
+        selected_option = request.form[qid]
+        correctop = question.get_correctop()
+        if selected_option == correctop:
+            correct_count = correct_count + 1
+        
+    correct_count = str(correct_count)
+    return correct_count
+
 
 @app.route('/stats')
 def stats():
@@ -69,4 +118,5 @@ def register():
 def logout():
     logout_user()
     return redirect(url_for('index'))
+
 

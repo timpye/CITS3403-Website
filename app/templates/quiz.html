@@ -2,4 +2,21 @@
 
 {% block content %}
 <h1>Quiz</h1>
+    <form action="/submission", method="post">
+
+        {% for question in q_list %}
+            <h4>
+            {{question.question}} <br>
+            <input type="radio" name={{question.q_id}} value="{{question.op1}}"required> {{question.op1}}
+            <input type="radio" name={{question.q_id}} value="{{question.op2}}"required> {{question.op2}}
+            <input type="radio" name={{question.q_id}} value="{{question.op3}}"required> {{question.op3}}
+            <input type="radio" name={{question.q_id}} value="{{question.op4}}"required> {{question.op4}}
+            
+        </h4>
+        
+        
+        {% endfor %}
+        <br><br>
+        <input type="submit" name="submitform" value="submit">
+    </form>
 {% endblock %}
