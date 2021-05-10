@@ -97,6 +97,10 @@ def stats():
 def content():
     return render_template('content.html', title = 'Content')
 
+@app.route('/graphics_card')
+def graphics_card():
+    return render_template('graphics_card.html', title='Graphics Card')
+
 @app.route('/feedback')
 def feedback():
     return render_template('feedback.html', title = 'Feedback')
