@@ -85,7 +85,8 @@ def submit():
             correct_count = correct_count + 1
         
     correct_count = str(correct_count)
-    return correct_count
+    return render_template('submission.html', title = 'Submission', correct_count=correct_count)
+        
 
 
 @app.route('/stats')
