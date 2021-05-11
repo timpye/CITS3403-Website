@@ -100,6 +100,10 @@ def content():
 def graphics_card():
     return render_template('graphics_card.html', title='Graphics Card')
 
+@app.route('/ram')
+def ram():
+    return render_template('ram.html', title='RAM')
+
 @app.route('/feedback')
 def feedback():
     return render_template('feedback.html', title = 'Feedback')
