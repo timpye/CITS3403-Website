@@ -1,8 +1,23 @@
 .pc_sideview {
     margin-left: auto;
     margin-right: auto;
+    
+    padding-left: 7em;
 }
 
 h1 {
     padding-left: 50px;
+}
+
+.navbar {
+    background-color: violet;
+}
+
+.container #css{
+    background-color: #EFDCF9;
+}
+
+body {
+    background-color: #EFDCF9;
+    background-size: cover;
 }
