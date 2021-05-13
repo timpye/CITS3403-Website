@@ -2,7 +2,7 @@
     margin-left: auto;
     margin-right: auto;
     
-    padding-left: 7em;
+    border: 50px;
 }
 
 h1 {
@@ -13,11 +13,16 @@ h1 {
     background-color: violet;
 }
 
-.container #css{
-    background-color: #EFDCF9;
+.heading {
+    font-size: x-large;
+}
+
+.quiz{
+    padding-left: 50px;
 }
 
 body {
     background-color: #EFDCF9;
     background-size: cover;
+    font-family: Roboto;
 }

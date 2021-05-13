@@ -1,8 +1,8 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <h1>Quiz</h1>
-        <form action="/submission", method="post">
+    <h1 class="heading">Quiz</h1>
+        <form action="/submission", method="post" class="quiz">
 
             {% for question in q_list %}
             <h2>
