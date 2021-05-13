@@ -62,12 +62,13 @@ class Question:
         elif self.correctop == 4:
             return self.op4
     
-q1 = Question(1, "Test question 1", "correct", "wrong", "wrong", "wrong", 1)
-q2 = Question(2, "Test question 2", "wrong", "correct", "wrong", "wrong", 2)
-q3 = Question(3, "Test question 2", "wrong", "wrong", "correct", "wrong", 3)
-q4 = Question(4, "Test question 2", "wrong", "wrong", "wrong", "correct", 4)
+q1 = Question(1, "Which one of these isn't part of a computer?", "CPU", "GPU", "Monitor", "RAM", 3)
+q2 = Question(2, "What does GPU stand for?", "Graphics Processing Unit", "Good Power Unit", "Graphical Powering Unit", "General Processing Unit", 1)
+q3 = Question(3, "What isn't a Power Supply Certification?", "Gold", "Bronze", "Copper", "Platinum", 3)
+q4 = Question(4, "What does RAM stand for?", "Rise Against Machines", "Roast And Mash", "Restructed Acessability Module", "Random Access Memory", 4)
+q5 = Question(5, "Which one of these isn't a peripheral to a PC?", "Keyboard", "Mouse", "Solid State Drive", "Printer", 3)
 
-q_list = [q1, q2, q3, q4]
+q_list = [q1, q2, q3, q4, q5]
 
 @app.route('/quiz')
 def quiz():
