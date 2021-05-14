@@ -70,10 +70,12 @@ q5 = Question(5, "Which one of these isn't a peripheral to a PC?", "Keyboard", "
 
 q_list = [q1, q2, q3, q4, q5]
 
+@login_required
 @app.route('/quiz')
 def quiz():
     return render_template('quiz.html', title = 'Quiz', q_list = q_list)
 
+@login_required
 @app.route("/submission", methods=['POST', 'GET'])
 def submit():
     correct_count = 0
