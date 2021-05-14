@@ -15,11 +15,20 @@
     quiz to assess your knowledge of Computer Building. Good luck!
     </p>
 
+
+    {%if current_user.is_authenticated %}
     <a href= "content">
     <button>
     Get started!
     </button>
     </a>
+    {% else %}
+    <a href= "register">
+    <button>
+    Get started!
+    </button>
+    </a>
+    {% endif %}
 
     </div>
 {% endblock %}
