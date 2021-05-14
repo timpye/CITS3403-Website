@@ -1,21 +1,22 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <h1 class="heading">Quiz</h1>
+    <div class="quiz">
+        <h1>Quiz</h1>
         <form action="/submission", method="post" class="quiz">
 
             {% for question in q_list %}
-            <h2>
+            <p>
                 {{question.question}} <br>
                 <input type="radio" name={{question.q_id}} value="{{question.op1}}"required> {{question.op1}}<br>
                 <input type="radio" name={{question.q_id}} value="{{question.op2}}"required> {{question.op2}}<br>
                 <input type="radio" name={{question.q_id}} value="{{question.op3}}"required> {{question.op3}}<br>
                 <input type="radio" name={{question.q_id}} value="{{question.op4}}"required> {{question.op4}}<br>
-            
-            </h2>
+            </p>
         
         {% endfor %}
         <br><br>
         <input type="submit" name="submitform" value="Submit">
     </form>
+    </div>
 {% endblock %}

@@ -9,6 +9,11 @@ h1 {
     padding-left: 50px;
 }
 
+h2 {
+    padding-left: 50px;
+}
+
+
 .navbar {
     background-color: violet;
 }
@@ -25,4 +30,17 @@ body {
     background-color: #EFDCF9;
     background-size: cover;
     font-family: 'Roboto' ;
+}
+
+.sub {
+    width: 800px;
+    margin: auto;
+}
+
+.ind {
+    padding: 80px;
+    width: 800px;
+    margin: auto;
+    font-size: large;
+    height: 800px;
 }

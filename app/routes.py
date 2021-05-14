@@ -78,16 +78,25 @@ def quiz():
 @login_required
 @app.route("/submission", methods=['POST', 'GET'])
 def submit():
-    correct_count = 0
+    score = 0
     for question in q_list:
         qid = str(question.q_id)
         selected_option = request.form[qid]
         correctop = question.get_correctop()
         if selected_option == correctop:
-            correct_count = correct_count + 1
+            score = score + 1
         
-    correct_count = str(correct_count)
-    return render_template('submission.html', title = 'Submission', correct_count=correct_count)
+    message = ""
+    if score < 3:
+        message = "You scored " + str(score) + " /10. Bad"
+    elif score < 5: 
+        message = "You scored " + str(score) + " /10. Not so bad"
+    elif score < 9:
+        message = "You scored " + str(score) + " /10. Great"
+    else:
+        message = "You scored "+ str(score) + " /10. Amazing!"
+
+    return render_template('submission.html', title = 'Submission', message = message)
         
 
 
@@ -129,5 +138,7 @@ def register():
 def logout():
     logout_user()
     return redirect(url_for('index'))
+
+
 
 
