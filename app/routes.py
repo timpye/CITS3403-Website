@@ -62,18 +62,88 @@ class Question:
         elif self.correctop == 4:
             return self.op4
     
-q1 = Question(1, "Which one of these isn't part of a computer?", "CPU", "GPU", "Monitor", "RAM", 3)
-q2 = Question(2, "What does GPU stand for?", "Graphics Processing Unit", "Good Power Unit", "Graphical Powering Unit", "General Processing Unit", 1)
-q3 = Question(3, "What isn't a Power Supply Certification?", "Gold", "Bronze", "Copper", "Platinum", 3)
-q4 = Question(4, "What does RAM stand for?", "Rise Against Machines", "Roast And Mash", "Restructed Acessability Module", "Random Access Memory", 4)
-q5 = Question(5, "Which one of these isn't a peripheral to a PC?", "Keyboard", "Mouse", "Solid State Drive", "Printer", 3)
+q1 = Question(1, "(1). Which one of these isn't part of a computer?", "a. CPU", "b. GPU", "c. Monitor", "d. RAM", 3)
+q2 = Question(2, "(2). What does GPU stand for?", "a. Graphics Processing Unit", "b. Good Power Unit", "c. Graphical Powering Unit", "d. General Processing Unit", 1)
+q3 = Question(3, "(3). What isn't a Power Supply Certification?", "a. Gold", "b. Bronze", "c. Copper", "d. Platinum", 3)
+q4 = Question(4, "(4). What does RAM stand for?", "a. Rise Against Machines", "b. Roast And Mash", "c. Restructed Acessability Module", "d. Random Access Memory", 4)
+q5 = Question(5, "(5). Which of these is the fastest type of SSD", "a. SATA", "b. SSHD", "c. NVMe", "d. Printer", 3)
+q6 = Question(6, "(6). What do you need to apply to a CPU before putting it on?", "a. Tooth Paste", "b. Compound Paste", "c. Thermal Paste", "d. Nothing", 3)
+q7 = Question(7, "(7). What do you call the slots that you put the RAM into?", "a. DAMM slots", "b. DIMM slots", "c. JIMM slots", "d. DDMM slots", 2)
 
-q_list = [q1, q2, q3, q4, q5]
+q_list = [q1, q2, q3, q4, q5, q6, q7]
+
+
+class Question2:
+    q_id = -1
+    question= ""
+    op1= ""
+    op2= ""
+    op3= ""
+    op4= ""
+    op5= ""
+    correctop1 = -1
+    correctop2 = -1
+    correctop3 = -1
+
+    def __init__(self, q_id, question, op1, op2, op3, op4, op5, correctop1, correctop2, correctop3):
+        self.q_id = q_id
+        self.question = question
+        self.op1 = op1
+        self.op2 = op2
+        self.op3 = op3
+        self.op4 = op4
+        self.op5 = op5
+        self.correctop1 = correctop1
+        self.correctop2 = correctop2
+        self.correctop3 = correctop3
+
+    def get_correctop1(self):
+        if self.correctop1 == 1:
+            return self.op1
+        elif self.correctop1 == 2:
+            return self.op2
+        elif self.correctop1 == 3:
+            return self.op3
+        elif self.correctop1 == 4:
+            return self.op4
+        elif self.correctop1 == 5:
+            return self.op5
+        
+    def get_correctop2(self):
+        if self.correctop2 == 1:
+            return self.op1
+        elif self.correctop2 == 2:
+            return self.op2
+        elif self.correctop2 == 3:
+            return self.op3
+        elif self.correctop2 == 4:
+            return self.op4
+        elif self.correctop2 == 5:
+            return self.op5
+
+    def get_correctop3(self):   
+        if self.correctop3 == 1:
+            return self.op1
+        elif self.correctop3 == 2:
+            return self.op2
+        elif self.correctop3 == 3:
+            return self.op3
+        elif self.correctop3 == 4:
+            return self.op4
+        elif self.correctop3 == 5:
+            return self.op5
+
+q8 = Question2(8, "(8). Check all the peripherals used with a PC.", "a. Keyboard", "b. Mouse", "c. Solid State Drive", "d. Printer", "e. Memory", 1, 2, 4)
+q9 = Question2(9, "(9). Check all the applications of a GPU.", "a. Crypto Mining", "b. Shiny Graphics", "c. Deep Learning", "d. Store Files", "e. Running the OS", 1, 2, 3)
+q10 = Question2(10, "(10). Check all the important considerations in terms of performance when picking components for a PC.", "a. Processor Speed", "b. RGB lighting", "c. Video Memory", "d. RAM Speed", "e. Storage Capacity", 1, 3, 4)
+
+q2_list = [q8, q9, q10]
+
 
 @login_required
 @app.route('/quiz')
 def quiz():
-    return render_template('quiz.html', title = 'Quiz', q_list = q_list)
+    return render_template('quiz.html', title = 'Quiz', q_list = q_list, q2_list = q2_list)
 
 @login_required
 @app.route("/submission", methods=['POST', 'GET'])
@@ -85,6 +155,19 @@ def submit():
         correctop = question.get_correctop()
         if selected_option == correctop:
             score = score + 1
+
+    for question in q2_list:
+        qid = str(question.q_id)
+        selected_option = request.form[qid]
+        correctop1 = question.get_correctop1()
+        correctop2 = question.get_correctop2()
+        correctop3 = question.get_correctop3()
+        if selected_option == correctop1:
+            score = score + 1
+        elif selected_option == correctop2:
+            score = score + 2
+        elif selected_option == correctop3:
+            score = score + 3
         
     message = ""
     if score < 3:
@@ -94,7 +177,7 @@ def submit():
     elif score < 9:
         message = "You scored " + str(score) + " /10. Great"
     else:
-        message = "You scored "+ str(score) + " /10. Amazing!"
+        message = "You scored "+ str(score) + " /10. Amazing!"  
 
     return render_template('submission.html', title = 'Submission', message = message)
         

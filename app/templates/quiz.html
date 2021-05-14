@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 
 {% block content %}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <div class="quiz">
         <h1>Quiz</h1>
         <form action="/submission", method="post" class="quiz">
@@ -11,10 +12,21 @@
                 <input type="radio" name={{question.q_id}} value="{{question.op1}}"required> {{question.op1}}<br>
                 <input type="radio" name={{question.q_id}} value="{{question.op2}}"required> {{question.op2}}<br>
                 <input type="radio" name={{question.q_id}} value="{{question.op3}}"required> {{question.op3}}<br>
-                <input type="radio" name={{question.q_id}} value="{{question.op4}}"required> {{question.op4}}<br>
-            </p>
-        
+                <input type="radio" name={{question.q_id}} value="{{question.op4}}"required> {{question.op4}}<br>  
+        </p>
         {% endfor %}
+        
+            {% for question in q2_list %}
+            <p>
+                {{question.question}} <br>
+                <input type="checkbox" name={{question.q_id}} value="{{question.op1}}"> {{question.op1}}<br>
+                <input type="checkbox" name={{question.q_id}} value="{{question.op2}}"> {{question.op2}}<br>
+                <input type="checkbox" name={{question.q_id}} value="{{question.op3}}"> {{question.op3}}<br>
+                <input type="checkbox" name={{question.q_id}} value="{{question.op4}}"> {{question.op4}}<br>
+                <input type="checkbox" name={{question.q_id}} value="{{question.op5}}"> {{question.op5}}<br>
+        </p>
+        {% endfor %}
+        
         <br><br>
         <input type="submit" name="submitform" value="Submit">
     </form>

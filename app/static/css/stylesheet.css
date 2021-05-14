@@ -33,8 +33,11 @@ body {
 }
 
 .sub {
+    padding: 80px;
     width: 800px;
     margin: auto;
+    font-size: large;
+    height: 800px;
 }
 
 .ind {
@@ -44,3 +47,5 @@ body {
     font-size: large;
     height: 800px;
 }
+
+
