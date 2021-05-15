@@ -46,6 +46,10 @@ body {
     margin: auto;
     font-size: large;
     height: 800px;
+    text-align: center;
 }
 
-
+.button{
+    margin:auto;
+    display:block;
+}
