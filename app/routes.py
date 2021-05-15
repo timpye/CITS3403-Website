@@ -1,14 +1,15 @@
 from app import app
-from flask import Flask, render_template, flash, redirect, url_for
+from flask import Flask, render_template, flash, redirect, url_for, session
 from app.forms import LoginForm
 from flask_login import current_user, login_user, logout_user, login_required
 from app import db
 from app.forms import RegistrationForm
 from flask_login import logout_user
 from flask_login import login_required
-from app.models import User
+from app.models import User, Result
 from flask import request
 from werkzeug.urls import url_parse
+
 
 
 
@@ -149,12 +150,19 @@ def quiz():
 @app.route("/submission", methods=['POST', 'GET'])
 def submit():
     score = 0
+    question_number = 0
+    question_list = [False,False,False,False,False,False,False,False,False,False,]
     for question in q_list:
+
         qid = str(question.q_id)
         selected_option = request.form[qid]
         correctop = question.get_correctop()
         if selected_option == correctop:
+            question_list[question_number] = True
             score = score + 1
+        else:
+            question_list[question_number] = False
+        question_number += 1
 
     for question in q2_list:
         qid = str(question.q_id)
@@ -164,11 +172,20 @@ def submit():
         correctop3 = question.get_correctop3()
         if selected_option == correctop1:
             score = score + 1
+            question_list[question_number] = True
         elif selected_option == correctop2:
             score = score + 2
+            question_list[question_number] = True
         elif selected_option == correctop3:
             score = score + 3
-        
+            question_list[question_number] = True
+        question_number += 1
+    
+    result = Result(user_id=current_user.get_id())
+    result.add_results(question_list, score)
+    db.session.add(result)
+    db.session.commit()
+
     message = ""
     if score < 3:
         message = "You scored " + str(score) + " /10. Bad"

@@ -27,7 +27,40 @@ class Result(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     user_id = db.Column(db.Integer, db.ForeignKey("user.id"))
     num_correct = db.Column(db.Integer)
-    
+    first_correct = db.Column(db.Boolean)
+    second_correct = db.Column(db.Boolean)
+    third_correct = db.Column(db.Boolean)
+    fourth_correct = db.Column(db.Boolean)
+    fifth_correct = db.Column(db.Boolean)
+    sixth_correct = db.Column(db.Boolean)
+    seventh_correct = db.Column(db.Boolean)
+    eigth_correct = db.Column(db.Boolean)
+    ninth_correct = db.Column(db.Boolean)
+    tenth_correct = db.Column(db.Boolean) 
 
     def __repr__(self):
         return '<{} result {}>'.format(self.user_id, self.num_correct)
+
+    def add_results(self, results_list, score):
+        self.num_correct = score
+        num = 0
+        first_correct = results_list[num]
+        num += 1
+        second_correct = results_list[num]
+        num += 1
+        third_correct = results_list[num]
+        num += 1
+        fourth_correct = results_list[num]
+        num += 1
+        fifth_correct = results_list[num]
+        num += 1
+        sixth_correct = results_list[num]
+        num += 1
+        seventh_correct = results_list[num]
+        num += 1
+        eigth_correct = results_list[num]
+        num += 1
+        ninth_correct = results_list[num]
+        num += 1
+        tenth_correct = results_list[num]
+        num += 1
