@@ -8,9 +8,9 @@
         <area target="_self" alt="Graphics Card" title="Graphics Card" onclick="document.getElementById('graphics_card').style.display='none'" href=# coords="483,355,133,292" shape="rect">
         <area target="_self" alt="RAM" title="RAM" href= "{{ url_for('ram') }}" coords="318,134,366,285" shape="rect">   
     </map>
-    <div class = 'container-fluid'>
+    <div class = 'container-fluid' onload = "showContentList">
         <div class = "content_block" id="CPU">
-            <h1>CPU (Computer Processing Unit)</h1>
+            <a href="{{ url_for('content') }}" onclick="showCPU">CPU (Computer Processing Unit)</a>
             <img class='img-responsive' src = 'static\images\CPU.jpg' alt="CPU (Central Processing Unit">
         </div>
         <div class = "content_block" id="GPU">
@@ -36,5 +36,19 @@
         </div>
     </div>
     
+    <script>
+        function showContentList() {
+            document.getElementsByClassName("content_block").style.display="block";
+        }
+        function showCPU() {
+            document.getElementsByClassName("pc_sideview").style.display="none"
+            document.getElementById("CPU").style.display="block"
+            document.getElementById("GPU").style.display="none"
+            document.getElementById("RAM").style.display="none"
+            document.getElementById("Storage").style.display="none"
+            document.getElementById("Peripheral").style.display="none" 
+            document.getElementById("Power_supply").style.display="none"
+        }
+    </script>
 
 {% endblock %}

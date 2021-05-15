@@ -5,6 +5,11 @@
     border: 50px;
 }
 
+.content_img {
+    width: 50%;
+    height: 50%;
+}   
+
 h1 {
     padding-left: 50px;
 }
