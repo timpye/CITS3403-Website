@@ -191,9 +191,9 @@ def stats():
 def content():
     return render_template('content.html', title = 'Content')
 
-@app.route('/graphics_card')
-def graphics_card():
-    return render_template('graphics_card.html', title='Graphics Card')
+@app.route('/cpu')
+def cpu():
+    return render_template('cpu.html', title='CPU (Central Processing Unit')
 
 @app.route('/ram')
 def ram():
