@@ -51,6 +51,10 @@ body {
     margin: auto;
     font-size: large;
     height: 800px;
+    text-align: center;
 }
 
-
+.cen{
+    margin:auto;
+    display:block;
+}
