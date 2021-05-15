@@ -9,45 +9,40 @@
         <area target="_self" alt="RAM" title="RAM" href= "{{ url_for('ram') }}" coords="318,134,366,285" shape="rect">   
     </map>
     <div class = 'container-fluid' onload = "showContentList">
-        <div class = "content_block" id="CPU">
-            <a href="{{ url_for('content') }}" onclick="showCPU">CPU (Computer Processing Unit)</a>
-            <img class='img-responsive' src = 'static\images\CPU.jpg' alt="CPU (Central Processing Unit">
-        </div>
-        <div class = "content_block" id="GPU">
+        <div class = "content_block">
+            <a href="#CPU" onclick="showCPU">
+                <h1>CPU (Central Processing Unit)</h1>
+            </a>
+            <img class='img-responsive' src = 'static\images\CPU.jpg' alt="CPU (Central Processing Unit)">
             <h1>GPU (Graphical Processing Unit)</h1>
             <img class='img-responsive' src = 'static\images\GPU.jpg' alt="GPU (Graphical Processing Unit)">
-        </div>
-        <div class = "content_block" id="RAM">
             <h1>RAM (Random Access Memory)</h1>
             <img class='img-responsive' src = 'static\images\RAM.jpg' alt="RAM (Random Access Memory)">
-        </div>
-        <div class = "content_block" id="Storage">
+
             <h1>Storage</h1>
             <img class='img-responsive' src = 'static\images\NVME_SSD.jpg' alt="Storage">
-        </div>
-        <div class = "content_block" id="Peripheral">
             <h1>Peripheral</h1>
             <img class='img-responsive' src = 'static\images\Mouse.jpg' alt="Mouse">
             <img class='img-responsive' src = 'static\images\Keyboard.jpg' alt="Keyboard">
-        </div>
-        <div class = "content_block" id="Power_Supply">
+            
             <h1>Power Supply</h1>
             <img class='img-responsive' src = 'static\images\Power_supply.jpg'>
         </div>
+    </div>
+
+    <div id="CPU">
+        <h1>Central Processing Unit (CPU)</h1>
+        <p>The CPU stands for Central Processing Unit. It's known as the "brains" of the computer.</p>
+        <button type="button" onclick="showContentList"></button><br>
     </div>
     
     <script>
         function showContentList() {
             document.getElementsByClassName("content_block").style.display="block";
+            document.getElementById("CPU").style.display="none";
         }
         function showCPU() {
-            document.getElementsByClassName("pc_sideview").style.display="none"
-            document.getElementById("CPU").style.display="block"
-            document.getElementById("GPU").style.display="none"
-            document.getElementById("RAM").style.display="none"
-            document.getElementById("Storage").style.display="none"
-            document.getElementById("Peripheral").style.display="none" 
-            document.getElementById("Power_supply").style.display="none"
+            document.getElementsByClassName("content_block").style.display="none"
         }
     </script>
 
