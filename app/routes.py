@@ -241,7 +241,7 @@ def content():
 def cpu():
     return render_template('cpu.html', title='CPU (Central Processing Unit')
 
-@app.route('motherboard')
+@app.route('/motherboard')
 def motherboard():
     return render_template('motherboard.html', title='Motherboard')
 
