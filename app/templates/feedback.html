@@ -2,14 +2,26 @@
 
 {% block content %}
     <h1>Feedback</h1>
+        <div class = "container">
+        
+            <table class = "table">
+                <tr>
+                    <th>Question Number</th>
+                    <th>Question</th>
+                    <th>Right Answer</th>
+                    <th>Correct?</th>
+                </tr>
+                {% for q in q1_data %}
+                <tr>
+                    <td>{{ q[0] }}</td>
+                    <td>{{ q[1] }}</td>
+                    <td>{{ q[2] }}</td>
+                    <td>{{ q[3] }}</td>
+                </tr>
+                {% endfor %}
+            </table>
+        
+        </div>
     
-    {% for f in feedback %}
-        <table>
-            <th>Question Number</th>
-            <th>Question</th>
-            <th>Right Answer</th>
-            <th>Correct?</th>
-        </table>
-    {% endfor %}
 
 {% endblock %}

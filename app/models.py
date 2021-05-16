@@ -50,36 +50,27 @@ class Result(db.Model):
     def add_results(self, results_list, score):
         self.num_correct = score
         num = 0
-        first_correct = results_list[num]
+        self.first_correct = results_list[num]
         num += 1
-        second_correct = results_list[num]
+        self.second_correct = results_list[num]
         num += 1
-        third_correct = results_list[num]
+        self.third_correct = results_list[num]
         num += 1
-        fourth_correct = results_list[num]
+        self.fourth_correct = results_list[num]
         num += 1
-        fifth_correct = results_list[num]
+        self.fifth_correct = results_list[num]
         num += 1
-        sixth_correct = results_list[num]
+        self.sixth_correct = results_list[num]
         num += 1
-        seventh_correct = results_list[num]
+        self.seventh_correct = results_list[num]
         num += 1
-        eigth_correct = results_list[num]
+        self.eigth_correct = results_list[num]
         num += 1
-        ninth_correct = results_list[num]
+        self.ninth_correct = results_list[num]
         num += 1
-        tenth_correct = results_list[num]
+        self.tenth_correct = results_list[num]
         num += 1
 
-        def getResults(self):
-            return [self.num_correct,
-                    self.first_correct,
-                    self.second_correct,
-                    self.third_correct,
-                    self.fourth_correct,
-                    self.fifth_correct,
-                    self.sixth_correct,
-                    self.seventh_correct,
-                    self.eigth_correct,
-                    self.ninth_correct,
-                    self.tenth_correct]
+        
+
+        

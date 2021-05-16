@@ -152,7 +152,7 @@ def quiz():
 def submit():
     score = 0
     question_number = 0
-    question_list = [False,False,False,False,False,False,False,False,False,False,]
+    question_list = [False,False,False,False,False,False,False,False,False,False]
     for question in q_list:
 
         qid = str(question.q_id)
@@ -182,6 +182,7 @@ def submit():
             question_list[question_number] = True
         question_number += 1
     
+    #print(question_list)
     result = Result(user_id=current_user.get_id(),date_created=datetime.today())
     result.add_results(question_list, score)
     db.session.add(result)
@@ -255,22 +256,25 @@ def ram():
 
 @app.route('/feedback')
 def feedback():
-    q_data = []
+    q1_data = []
+    q2_data = []
     answers = []
-    i = 1
+    i = 3
 
     for column in Result.__table__.columns:
-        answers.append(db.session.Result.query(column).filter(User.id==Result.user_id).desc().one())
-        print(answers)
+        answers.append(db.session.query(column).filter(current_user.get_id()==Result.user_id).first())
+    #print(answers)
 
     for q in q_list:
-        db.session.Result.query(Result.first_correct).filter(User.id==Result.user_id).desc().one()
-        q_data.append((q.q_id, q.question,))
+        q1_data.append((q.q_id, q.question, q.get_correctop(), answers[i][0]))
         i+=1      
-    
-   
+    #print(q_data)
 
-    return render_template('feedback.html', title = 'Feedback')
+    for q in q2_list:
+        q2_data.append((q.q_id, q.question, (q.get_correctop1(), q.get_correctop2(), q.get_correctop3()), answers[i]))
+        i += 1
+    print(q1_data,q2_data)
+    return render_template('feedback.html', title = 'Feedback', q1_data = q1_data, q2_data = q2_data)
 
 @app.route('/register', methods=['GET', 'POST'])
 def register():
