@@ -212,6 +212,10 @@ def content():
 def cpu():
     return render_template('cpu.html', title='CPU (Central Processing Unit')
 
+@app.route('/gpu')
+def gpu():
+    return render_template('gpu.html', title='GPU (Graphical Processing Unit)')
+
 @app.route('/ram')
 def ram():
     return render_template('ram.html', title='RAM')
