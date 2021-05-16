@@ -10,6 +10,7 @@ from app.models import User, Result
 from werkzeug.urls import url_parse
 from sqlalchemy import func, extract
 from datetime import datetime
+import sqlalchemy
 
 
 
@@ -183,6 +184,7 @@ def submit():
         question_number += 1
     
     #print(question_list)
+    current_user.complete_quiz()
     result = Result(user_id=current_user.get_id(),date_created=datetime.today())
     result.add_results(question_list, score)
     db.session.add(result)
@@ -272,13 +274,15 @@ def feedback():
     q2_data = []
     answers = []
     i = 3
+    completed = db.session.query(User.completed_quiz).filter(User.id==current_user.get_id()).first()[0]
+    print("Completed: ", completed)
 
     for column in Result.__table__.columns:
-        answers.append(db.session.query(column).filter(current_user.get_id()==Result.user_id).first())
+        answers.append(db.session.query(column).filter(current_user.get_id()==Result.user_id).order_by(sqlalchemy.desc(Result.date_created)).first())
     #print(answers)
 
     for q in q_list:
-        q1_data.append((q.q_id, q.question, q.get_correctop(), answers[i][0]))
+        q1_data.append((q.q_id, q.question, q.get_correctop(), answers[i]))
         i+=1      
     #print(q_data)
 
@@ -286,7 +290,7 @@ def feedback():
         q2_data.append((q.q_id, q.question, (q.get_correctop1(), q.get_correctop2(), q.get_correctop3()), answers[i]))
         i += 1
     print(q1_data,q2_data)
-    return render_template('feedback.html', title = 'Feedback', q1_data = q1_data, q2_data = q2_data)
+    return render_template('feedback.html', title = 'Feedback', q1_data = q1_data, q2_data = q2_data, complete = completed)
 
 @app.route('/register', methods=['GET', 'POST'])
 def register():
@@ -294,7 +298,7 @@ def register():
         return redirect(url_for('index'))
     form = RegistrationForm()
     if form.validate_on_submit():
-        user = User(username=form.username.data, email=form.email.data)
+        user = User(username=form.username.data, email=form.email.data, completed_quiz=False)
         user.set_password(form.password.data)
         db.session.add(user)
         db.session.commit()

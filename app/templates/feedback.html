@@ -3,7 +3,9 @@
 {% block content %}
     <h1>Feedback</h1>
         <div class = "container">
-        
+            
+            {% if complete==True %}
+            <h2>Most Recent Quiz Results:</h2>
             <table class = "table">
                 <tr>
                     <th>Question Number</th>
@@ -16,11 +18,22 @@
                     <td>{{ q[0] }}</td>
                     <td>{{ q[1] }}</td>
                     <td>{{ q[2] }}</td>
-                    <td>{{ q[3] }}</td>
+                    <td>{{ q[3][0] }}</td>
                 </tr>
                 {% endfor %}
             </table>
-        
+            
+            {% else %}
+            <div class = "container sub">
+                <h2>Please complete the quiz to get Feedback</h2>
+                <div class = "cen">
+                    <a href = "quiz">
+                        <button>Quiz</button>
+                    </a>
+                </div>
+                
+            </div>
+            {%endif%}
         </div>
     
 

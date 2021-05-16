@@ -10,6 +10,7 @@ class User(UserMixin, db.Model):
     email = db.Column(db.String(120), index=True, unique=True)
     password_hash = db.Column(db.String(128))
     day_joined = db.Column(db.DateTime())
+    completed_quiz = db.Column(db.Boolean)
     
 
     def __repr__(self):
@@ -23,6 +24,9 @@ class User(UserMixin, db.Model):
 
     def set_day_joined(self):
         self.day_joined = datetime.today()
+
+    def complete_quiz(self):
+        self.completed_quiz = True
     
     @login.user_loader
     def load_user(id):
