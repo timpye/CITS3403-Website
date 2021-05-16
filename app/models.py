@@ -20,6 +20,9 @@ class User(UserMixin, db.Model):
     
     def check_password(self, password):
         return check_password_hash(self.password_hash, password)
+
+    def set_day_joined(self):
+        self.day_joined = datetime.today()
     
     @login.user_loader
     def load_user(id):
@@ -67,3 +70,16 @@ class Result(db.Model):
         num += 1
         tenth_correct = results_list[num]
         num += 1
+
+        def getResults(self):
+            return [self.num_correct,
+                    self.first_correct,
+                    self.second_correct,
+                    self.third_correct,
+                    self.fourth_correct,
+                    self.fifth_correct,
+                    self.sixth_correct,
+                    self.seventh_correct,
+                    self.eigth_correct,
+                    self.ninth_correct,
+                    self.tenth_correct]

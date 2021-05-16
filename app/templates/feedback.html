@@ -3,4 +3,13 @@
 {% block content %}
     <h1>Feedback</h1>
     
+    {% for f in feedback %}
+        <table>
+            <th>Question Number</th>
+            <th>Question</th>
+            <th>Right Answer</th>
+            <th>Correct?</th>
+        </table>
+    {% endfor %}
+
 {% endblock %}

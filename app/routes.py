@@ -251,7 +251,18 @@ def ram():
 
 @app.route('/feedback')
 def feedback():
-    
+    q_data = []
+    answers = []
+    i = 1
+
+    for column in Result.__table__.columns:
+        answers.append(db.session.Result.query(column).filter(User.id==Result.user_id).desc().one())
+        print(answers)
+
+    for q in q_list:
+        db.session.Result.query(Result.first_correct).filter(User.id==Result.user_id).desc().one()
+        q_data.append((q.q_id, q.question,))
+        i+=1      
    
 
     return render_template('feedback.html', title = 'Feedback')
