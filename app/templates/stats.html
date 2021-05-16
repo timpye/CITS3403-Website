@@ -11,9 +11,15 @@
         <br>
         <h2>Average Mark - {{ average_mark }}/10</h2>
         <br>
+        <h2>Total Users - {{ total_users }}</h2>
+        <br>
+        <h2>Quizzes taken today - {{ quizzes_today }}</h2>
+        <br>
+        <!--<h2>Average Score today - {{ score_today }}</h2>   WILL COME BACK IF I GET IT FIXED
+        <br>-->
         <h2>Every Result:</h2>
         {% for result in every_result %}
-            <p>{{ result[1] }} - {{result[0]}}/10</p>
+            <p style = "padding-left: 100px;">{{ result[1] }} - {{result[0]}}/10</p>
         {% endfor %}
         <br>
         

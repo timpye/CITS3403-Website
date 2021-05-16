@@ -8,7 +8,8 @@ from flask_login import logout_user
 from flask_login import login_required
 from app.models import User, Result
 from werkzeug.urls import url_parse
-from sqlalchemy import func
+from sqlalchemy import func, extract
+from datetime import datetime
 
 
 
@@ -181,7 +182,7 @@ def submit():
             question_list[question_number] = True
         question_number += 1
     
-    result = Result(user_id=current_user.get_id())
+    result = Result(user_id=current_user.get_id(),date_created=datetime.today())
     result.add_results(question_list, score)
     db.session.add(result)
     db.session.commit()
@@ -212,9 +213,25 @@ def stats():
     
     average_mark = '{:.2f}'.format(db.session.query(func.avg(Result.num_correct).label("average"))[0][0]) #indexs to get at a tuple inside a list
 
+    today = (datetime.today().year, datetime.today().month, datetime.today().day)
+    
+    
+    quizzes_today = db.session.query(Result.date_created).filter(
+        extract('month', Result.date_created) == datetime.today().month,
+        extract('year', Result.date_created) == datetime.today().year).count()
+
+    score_today = db.session.query(func.avg(Result.num_correct)).filter(
+        extract('month', Result.date_created) == datetime.today().month,
+        extract('year', Result.date_created) == datetime.today().year,
+        extract('day', Result.date_created) == datetime.today().day).count()
+        
+    total_users = db.session.query(User).count()
+    print("Total Users: ", total_users)
+    print("Quizzes taken today: ",quizzes_today)
     print("Average:",average_mark)
     return render_template('stats.html', title = 'Statistics', user_results = user_results,
-    every_result = every_result, average_mark = average_mark)
+    every_result = every_result, average_mark = average_mark, total_users = total_users, 
+    quizzes_today = quizzes_today, score_today = score_today)
 
 @app.route('/content')
 def content():
@@ -235,7 +252,9 @@ def ram():
 @app.route('/feedback')
 def feedback():
     
-    return render_template('feedback.html', title = 'Feedback', user_results = results)
+   
+
+    return render_template('feedback.html', title = 'Feedback')
 
 @app.route('/register', methods=['GET', 'POST'])
 def register():

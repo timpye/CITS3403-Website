@@ -9,6 +9,8 @@ class User(UserMixin, db.Model):
     username = db.Column(db.String(64), index=True, unique=True)
     email = db.Column(db.String(120), index=True, unique=True)
     password_hash = db.Column(db.String(128))
+    day_joined = db.Column(db.DateTime())
+    
 
     def __repr__(self):
         return '<User {}>'.format(self.username)
@@ -37,6 +39,7 @@ class Result(db.Model):
     eigth_correct = db.Column(db.Boolean)
     ninth_correct = db.Column(db.Boolean)
     tenth_correct = db.Column(db.Boolean) 
+    date_created = db.Column(db.DateTime())
 
     def __repr__(self):
         return '<{}>'.format(self.num_correct)
