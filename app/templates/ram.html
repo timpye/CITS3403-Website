@@ -1,5 +1,42 @@
 {% extends "base.html" %}
 
 {% block content %} 
-    <h1>RAM (Random Access Memory)</h1>
+    <div id="RAM_header">
+        <h1>
+            RAM (Random Access Memory)
+        </h1>
+        <img class='img-responsive' src = 'static\images\RAM.jpg' alt="RAM (Random Access Memory)" style="width: 640px; height: 480px; padding-left: 50px; ">
+    </div>
+    <div id="RAM_description">
+        <h2>
+            Description
+        </h2>
+        <p style="font-size: 20px; padding-left: 50px;">
+            Random Access Memory or RAM, is a type of volatile computer memory which stores information that your computer is actively using so it can accessed
+            very quickly. It is one of most important components when it comes to computer performance because too little of it can make your computer feel
+            sluggish however, too much of it may feel completely unnecessary, but all of this is dependant on your system use.
+        </p>    
+    </div>
+
+    <div id="RAM_install">
+        <h2>
+            Installation
+        </h2>
+        <p style="font-size: 20px; padding-left: 50px;"> 
+            To install RAM, you must place it into the corresponding DIMM slots of your motherboard, in order to get the full performance out of your RAM, you should
+            always consult your motherboard's manual, on the optimized placement of your RAM, for example in the most up to date motherboards, if you had two sticks of RAM
+            and four DIMM slots, you would place the RAM sticks in the 1st and 3rd DIMM slots as the first two slots share the same channel leading to reduced performance.
+        </p>
+    </div>
+
+    <div id="RAM_recommendation">
+        <h2>
+            Recommendation
+        </h2>
+        <p style="font-size: 20px; padding-left: 50px;"> 
+            Depending on your computer needs, there is a lot to consider when picking RAM, are you a gamer? then 16GB's of high speed low latency RAM should be more
+            than enough for high FPS gaming, on the otherhand, you might a professional video editor and you are dealing with lots of big video files all while 
+            rendering another video, then maybe 32GB or 64GB's of RAM might suit your needs.
+        </p>
+    </div>
 {% endblock %}
