@@ -1,5 +1,5 @@
 from app import app
-from flask import Flask, render_template, flash, redirect, url_for, session
+from flask import Flask, render_template, flash, redirect, url_for, session, request
 from app.forms import LoginForm
 from flask_login import current_user, login_user, logout_user, login_required
 from app import db
@@ -7,8 +7,8 @@ from app.forms import RegistrationForm
 from flask_login import logout_user
 from flask_login import login_required
 from app.models import User, Result
-from flask import request
 from werkzeug.urls import url_parse
+from sqlalchemy import func
 
 
 
@@ -202,7 +202,19 @@ def submit():
 
 @app.route('/stats')
 def stats():
-    return render_template('stats.html', title = 'Statistics')
+    user_results = []
+    for result in db.session.query(Result.num_correct).join(User).filter(User.id==(current_user.get_id())):
+        user_results.append(result[0])
+    
+    every_result = []
+    for result, name in db.session.query(Result.num_correct, User.username).filter(User.id==Result.user_id).all():
+        every_result.append((result, name))
+    
+    average_mark = '{:.2f}'.format(db.session.query(func.avg(Result.num_correct).label("average"))[0][0]) #indexs to get at a tuple inside a list
+
+    print("Average:",average_mark)
+    return render_template('stats.html', title = 'Statistics', user_results = user_results,
+    every_result = every_result, average_mark = average_mark)
 
 @app.route('/content')
 def content():
@@ -222,7 +234,8 @@ def ram():
 
 @app.route('/feedback')
 def feedback():
-    return render_template('feedback.html', title = 'Feedback')
+    
+    return render_template('feedback.html', title = 'Feedback', user_results = results)
 
 @app.route('/register', methods=['GET', 'POST'])
 def register():

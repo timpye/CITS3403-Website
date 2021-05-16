@@ -2,4 +2,20 @@
 
 {% block content %}
     <h1>Stats</h1>
+    <div class = container>
+        <h2>Your results:</h2>
+        {% for result in user_results %}
+            <p>Attempt {{ loop.index }} - {{ result }}/10</p>
+            
+        {% endfor %}
+        <br>
+        <h2>Average Mark - {{ average_mark }}/10</h2>
+        <br>
+        <h2>Every Result:</h2>
+        {% for result in every_result %}
+            <p>{{ result[1] }} - {{result[0]}}/10</p>
+        {% endfor %}
+        <br>
+        
+    </div>
 {% endblock %}

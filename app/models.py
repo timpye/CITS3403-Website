@@ -39,7 +39,7 @@ class Result(db.Model):
     tenth_correct = db.Column(db.Boolean) 
 
     def __repr__(self):
-        return '<{} result {}>'.format(self.user_id, self.num_correct)
+        return '<{}>'.format(self.num_correct)
 
     def add_results(self, results_list, score):
         self.num_correct = score
