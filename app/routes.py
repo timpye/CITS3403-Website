@@ -253,6 +253,18 @@ def gpu():
 def ram():
     return render_template('ram.html', title='RAM')
 
+@app.route('/storage')
+def storage():
+    return render_template('storage.html', title='Storage')
+
+@app.route('/peripheral')
+def peripheral():
+    return render_template('peripheral.html', title='Peripheral')
+
+@app.route('/psu')
+def psu():
+    return render_template('psu.html', title='Power Supply')
+
 @app.route('/feedback')
 def feedback():
     q_data = []
