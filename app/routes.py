@@ -241,6 +241,10 @@ def content():
 def cpu():
     return render_template('cpu.html', title='CPU (Central Processing Unit')
 
+@app.route('motherboard')
+def motherboard():
+    return render_template('motherboard.html', title='Motherboard')
+
 @app.route('/gpu')
 def gpu():
     return render_template('gpu.html', title='GPU (Graphical Processing Unit)')
