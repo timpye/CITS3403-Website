@@ -26,3 +26,8 @@ body {
     background-size: cover;
     font-family: 'Roboto' ;
 }
+
+.content_block {
+    height = 100px;
+    width = 280px;
+}
