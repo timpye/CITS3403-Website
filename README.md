@@ -54,15 +54,15 @@ $ pip install -r requirements.txt
 
 ### Initialising the database ###
 After installing all the prerequisites the database needs to be initialised with
-'''
+```
 flask db init
-'''
+```
 
 ### Deployment ###
 run the app with 
-'''
+```
 flask run
-'''
+```
 The app should now be running at localhost port 5000
 
 ### Built with ###
