@@ -270,6 +270,34 @@ def peripheral():
 def psu():
     return render_template('psu.html', title='Power Supply')
 
+@app.route('/cpuquiz')
+def cpuquiz():
+    return render_template('cpuquiz.html', title='CPU Quiz')
+
+@app.route('/gpuquiz')
+def gpuquiz():
+    return render_template('gpuquiz.html', title='GPU Quiz')
+
+@app.route('/moboquiz')
+def moboquiz():
+    return render_template('moboquiz.html', title='Motherboard Quiz')
+
+@app.route('/psuquiz')
+def psuquiz():
+    return render_template('psuquiz.html', title='PSU Quiz')
+
+@app.route('/ramquiz')
+def ramquiz():
+    return render_template('ramquiz.html', title='RAM Quiz')
+
+@app.route('/peripheralquiz')
+def peripheralquiz():
+    return render_template('peripheralquiz.html', title='Peripheral Quiz')
+
+@app.route('/storagequiz')
+def storagequiz():
+    return render_template('storagequiz.html', title='Storage Quiz')
+
 @app.route('/feedback')
 def feedback():
     q1_data = []

@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block app_content %}
+    {% if current_user.is_authenticated %}
+    <script src = "{{ url_for('static', filename='javascript/psuquiz.js') }}"></script>
+        <div class ="quiz">
+            <h1>Quick Quiz</h1>
+            <form id = "quiz" name = "quiz" class= "quiz">
+            
+            <p>
+                (1). What does a power supply do?<br>
+                <input type ="radio" id="qmc" name="q1" value ="Only powers the important components"> a. Only powers the important components<br>
+                <input type ="radio" id="qmc" name="q1" value ="Powers the other components"> b. Powers the other components<br>
+                <input type ="radio" id="qmc" name="q1" value ="Processes power"> c. Processes power<br>
+            </p>
+
+            <p>
+                (2). The power supply converts main AC power into " " power?<br>
+                <input type ="radio" id="qmc" name="q2" value ="Low-voltage"> a. Low-voltage<br>
+                <input type ="radio" id="qmc" name="q2" value ="High-voltage"> b. High-voltage<br>
+                <input type ="radio" id="qmc" name="q2" value ="Renewable energy"> c. Renewable energy<br>
+            </p>
+
+            <p>
+                (3). Power supply certification is used to measure what?<br>
+                <input type ="radio" id="qmc" name="q3" value ="Speed"> a. Speed<br>
+                <input type ="radio" id="qmc" name="q3" value ="Efficiency"> b. Efficiency<br>
+                <input type ="radio" id="qmc" name="q3" value ="Power"> c. Power<br>
+            </p>
+
+            <br>
+            <input id = "button" type = "button" value="Submit" onclick = "check();">
+        </form>
+
+            <div id = "submission"> 
+                <br>   
+                <p id ="user_score"></p>
+                <button type="button" onclick="window.location.href='content';">Back to content</button>
+            </div>
+        </div>
+    {% else %}
+    <div class = "container sub">
+        <h2>Please Login to complete the quiz</h2>
+        <div class = "cen">
+        <button type="button" onclick="window.location.href='content';">
+        </div>
+       
+    </div>
+    {%endif%}
+{% endblock %}

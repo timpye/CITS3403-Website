@@ -66,3 +66,8 @@ body {
     margin:auto;
     display:block;
 }
+
+#submission{
+    visibility: hidden;
+    padding-left: 50px;
+}
