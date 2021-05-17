@@ -221,7 +221,8 @@ def stats():
     
     quizzes_today = db.session.query(Result.date_created).filter(
         extract('month', Result.date_created) == datetime.today().month,
-        extract('year', Result.date_created) == datetime.today().year).count()
+        extract('year', Result.date_created) == datetime.today().year,
+        extract('day', Result.date_created) == datetime.today().day).count()
 
     score_today = db.session.query(func.avg(Result.num_correct)).filter(
         extract('month', Result.date_created) == datetime.today().month,
