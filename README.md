@@ -53,11 +53,11 @@ $ pip install -r requirements.txt
 ```
 
 ### Deployment ###
-run the app with 
+Run the app with 
 ```
 $ flask run
 ```
-The app should now be running at localhost port 5000
+The app should now be running at http://localhost:5000/
 
 ### Built with ###
 VSCode and Github Desktop
