@@ -213,9 +213,10 @@ def stats():
     every_result = []
     for result, name in db.session.query(Result.num_correct, User.username).filter(User.id==Result.user_id).all():
         every_result.append((result, name))
-    
-    average_mark = '{:.2f}'.format(db.session.query(func.avg(Result.num_correct).label("average"))[0][0]) #indexs to get at a tuple inside a list
-
+    try:
+        average_mark = '{:.2f}'.format(db.session.query(func.avg(Result.num_correct).label("average"))[0][0]) #indexs to get at a tuple inside a list
+    except:
+        average_mark = 'No results yet'
     today = (datetime.today().year, datetime.today().month, datetime.today().day)
     
     
