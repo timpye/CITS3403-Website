@@ -36,7 +36,7 @@ h2 {
 }
 
 body {
-    background-size: fill;
+    background-size: cover;
     background-repeat: no-repeat;
     font-family: 'Roboto' ;
     background-color: #4158D0;
@@ -60,6 +60,11 @@ body {
     font-size: large;
     height: 800px;
     text-align: center;
+}
+
+.img_responsive {
+    width: 640px;
+    height: 480px;
 }
 
 .cen{
