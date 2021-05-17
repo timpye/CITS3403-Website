@@ -1,0 +1,848 @@
+commit 113547eacca9480015bf9ba8a07329dbe3639d1d
+Author: timpye <72972212+timpye@users.noreply.github.com>
+Date:   Mon May 17 15:30:10 2021 +0800
+
+    Revert "Removed migrations and database folder"
+    
+    This reverts commit fc2d4715aeeb2aea754e5f7c71b5e730cb1b33b4.
+
+commit 41566458049dd8ba1efca66a5d33b6361b129a40
+Merge: fc2d471 e14e28d
+Author: timpye <72972212+timpye@users.noreply.github.com>
+Date:   Mon May 17 15:14:02 2021 +0800
+
+    Merge branch 'main' of https://github.com/timpye/CITS3403-Website into main
+
+commit fc2d4715aeeb2aea754e5f7c71b5e730cb1b33b4
+Author: timpye <72972212+timpye@users.noreply.github.com>
+Date:   Mon May 17 15:13:45 2021 +0800
+
+    Removed migrations and database folder
+    
+    User initialises database with flask db init; flask db upgrade
+
+commit e14e28d7fd5f76f1ae089cbef6e8c17fb0afda8d
+Merge: 8b82a31 82c0a4d
+Author: jakobdorian <79760777+jakobdorian@users.noreply.github.com>
+Date:   Mon May 17 15:06:34 2021 +0800
+
+    Merge branch 'main' of https://github.com/timpye/CITS3403-Website
+
+commit 8b82a3115f2d4cf92f1c396a1a00d5eda3217f00
+Author: jakobdorian <79760777+jakobdorian@users.noreply.github.com>
+Date:   Mon May 17 15:06:19 2021 +0800
+
+    added quick quiz
+
+commit 82c0a4d6346807430d07e450b282a0e5a0758278
+Author: timpye <72972212+timpye@users.noreply.github.com>
+Date:   Mon May 17 15:00:58 2021 +0800
+
+    Last 3 questions added to feedback
+
+commit b5f4e6284206d8f3059eae46e28048ceac5cd40f
+Author: timpye <72972212+timpye@users.noreply.github.com>
+Date:   Mon May 17 14:49:07 2021 +0800
+
+    stats bug fix
+
+commit abd8c2b445e7553989cc80fe82eb74d2cb3400ea
+Author: timpye <72972212+timpye@users.noreply.github.com>
+Date:   Mon May 17 13:58:22 2021 +0800
+
+    Readme updated
+
+commit 5dffa3595497df17805c9693d665a2da1378125a
+Author: timpye <72972212+timpye@users.noreply.github.com>
+Date:   Mon May 17 13:42:42 2021 +0800
+
+    Quizzes taken today fix
+
+commit c2d76b52010e2113424d12bebcaeb6da049d3219
+Author: timpye <72972212+timpye@users.noreply.github.com>
+Date:   Mon May 17 13:40:44 2021 +0800
+
+    Font and background changes
+
+commit 91479e430fbea858ec5b0fc8bc4e01850d5281a8
+Merge: cc09008 04e5345
+Author: timpye <72972212+timpye@users.noreply.github.com>
+Date:   Mon May 17 13:14:28 2021 +0800
+
+    Merge branch 'main' of https://github.com/timpye/CITS3403-Website into main
+
+commit cc090080dbbbd04d1fc2c471a1e28f0d1eefeb6c
+Author: timpye <72972212+timpye@users.noreply.github.com>
+Date:   Mon May 17 13:13:19 2021 +0800
+
+    minor style changes
+
+commit 04e5345b884c5db65693b241d8607b3f76c3bf49
+Author: jakobdorian <79760777+jakobdorian@users.noreply.github.com>
+Date:   Mon May 17 12:54:00 2021 +0800
+
+    Update README.md
+
+commit 071d79acd2a6292656f0225d8879f2e98821e8ac
+Author: jakobdorian <79760777+jakobdorian@users.noreply.github.com>
+Date:   Mon May 17 12:53:39 2021 +0800
+
+    Update README.md
+
+commit 7a8b4e3f0cfba0c5fabf2f8cdd828c90e92670b3
+Author: jakobdorian <79760777+jakobdorian@users.noreply.github.com>
+Date:   Mon May 17 12:42:22 2021 +0800
+
+    Update README.md
+
+commit 2ab90efe08335cbaddc8fc46ba087b248cd62c62
+Author: jakobdorian <79760777+jakobdorian@users.noreply.github.com>
+Date:   Mon May 17 12:24:21 2021 +0800
+
+    finished off all the content
+
+commit 4cae241df7b951030026c9ff32e4179a4e5f729b
+Author: jakobdorian <79760777+jakobdorian@users.noreply.github.com>
+Date:   Mon May 17 12:12:56 2021 +0800
+
+    Update README.md
+
+commit dc87d79377f5e2b5775076522a2ce9e3930fa6c3
+Author: anferneealviar99 <anferneealviar99@hotmail.com>
+Date:   Mon May 17 11:44:47 2021 +0800
+
+    made button redirect on click rather than using link
+
+commit f262e1169e0d7457596fbc3bcbf92645c2339e83
+Author: anferneealviar99 <anferneealviar99@hotmail.com>
+Date:   Mon May 17 10:44:19 2021 +0800
+
+    removed mapping
+
+commit f3c86bc5418b9bff3197a71092c194c7f7e6eb4d
+Author: anferneealviar99 <anferneealviar99@hotmail.com>
+Date:   Mon May 17 10:35:22 2021 +0800
+
+    applied content_p to storage.html
+
+commit 8ce5cb88ffa484c50321e5ee89148e6acdf1c11f
+Author: anferneealviar99 <anferneealviar99@hotmail.com>
+Date:   Mon May 17 10:34:40 2021 +0800
+
+    applied content_p to ram.html
+
+commit 47fb963fa62e71c4130a97c8f0dd3c90e476c983
+Author: anferneealviar99 <anferneealviar99@hotmail.com>
+Date:   Mon May 17 10:33:20 2021 +0800
+
+    applied content_p class to psu.html
+
+commit 4e4e52c6d96e08f6d7c5a30782eb96beff941e4a
+Author: anferneealviar99 <anferneealviar99@hotmail.com>
+Date:   Mon May 17 10:31:57 2021 +0800
+
+    Applied content_p style to motherboard and gpu htmls
+
+commit c922a3e5df3d7b636bc62963fe46927dba1d74fc
+Author: anferneealviar99 <anferneealviar99@hotmail.com>
+Date:   Mon May 17 10:29:09 2021 +0800
+
+    Made a paragraph class content_p in stylesheet and applied changes to cpu.html
+
+commit 212af204027a3f106bd5d500bb1c01c37209be58
+Author: anferneealviar99 <anferneealviar99@hotmail.com>
+Date:   Mon May 17 10:08:30 2021 +0800
+
+    removed script code in content.html, script in SPA_content branch
+
+commit 2959dd1217baacaad2f5ea96af48b44a4b578ee5
+Author: jakobdorian <79760777+jakobdorian@users.noreply.github.com>
+Date:   Sun May 16 23:14:14 2021 +0800
+
+    added content to psu
+
+commit a5d218bce3c96d17d01b5e6e235e7cb323c20fd0
+Author: timpye <72972212+timpye@users.noreply.github.com>
+Date:   Sun May 16 22:19:01 2021 +0800
+
+    Feedback Fixes
+
+commit 93df66f8ab036159ed37fd5fb72eaf3c3d083f8c
+Merge: d3b20af 70e9785
+Author: timpye <72972212+timpye@users.noreply.github.com>
+Date:   Sun May 16 21:42:31 2021 +0800
+
+    Merge branch 'main' of https://github.com/timpye/CITS3403-Website into main
+
+commit d3b20af4f09a57a4b27814a69755fbabdd6622b0
+Author: timpye <72972212+timpye@users.noreply.github.com>
+Date:   Sun May 16 21:42:26 2021 +0800
+
+    Feedback
+
+commit 70e9785c0004d06a20d6e295c380c63383008a7b
+Merge: d019925 8c39d1a
+Author: jakobdorian <79760777+jakobdorian@users.noreply.github.com>
+Date:   Sun May 16 19:59:50 2021 +0800
+
+    Merge branch 'main' of https://github.com/timpye/CITS3403-Website
+
+commit d019925d5ebd5649e5e221ef73005de79d7ed7fd
+Author: jakobdorian <79760777+jakobdorian@users.noreply.github.com>
+Date:   Sun May 16 19:59:03 2021 +0800
+
+    added storage content
+
+commit 8c39d1a339def6399d92a59bc92f722ae290fb66
+Author: anferneealviar99 <anferneealviar99@hotmail.com>
+Date:   Sun May 16 19:57:45 2021 +0800
+
+    cpu styling change
+
+commit 3c530cc0fdb7cd4a30ed8b7a9b04e4b1e5df2fb5
+Merge: 8278f6c ac99d69
+Author: anferneealviar99 <anferneealviar99@hotmail.com>
+Date:   Sun May 16 19:55:05 2021 +0800
+
+    Merge branch 'main' of https://github.com/timpye/CITS3403-Website
+
+commit 8278f6c026d5673f85f73b12dc6dbafe2241485b
+Author: anferneealviar99 <anferneealviar99@hotmail.com>
+Date:   Sun May 16 19:54:55 2021 +0800
+
+    edited CPU and motherboard
+
+commit ac99d6964aaccc262322369bc882a1544aa92a2a
+Merge: 68dcb86 eb29b2a
+Author: timpye <72972212+timpye@users.noreply.github.com>
+Date:   Sun May 16 19:47:25 2021 +0800
+
+    Merge branch 'main' of https://github.com/timpye/CITS3403-Website into main
+
+commit 68dcb864d3f400760220c5f980735af6e739959e
+Merge: be263b5 7f4e4f0
+Author: timpye <72972212+timpye@users.noreply.github.com>
+Date:   Sun May 16 19:47:13 2021 +0800
+
+    Merge branch 'main' of https://github.com/timpye/CITS3403-Website into main
+
+commit eb29b2a1cdb37a175d76a03fb8385ad2fde9368b
+Author: anferneealviar99 <anferneealviar99@hotmail.com>
+Date:   Sun May 16 19:46:55 2021 +0800
+
+    styling
+
+commit 93186deb74d5af801fa8096f1f530d4afb4e2c1d
+Merge: 5c1f51c 7f4e4f0
+Author: anferneealviar99 <anferneealviar99@hotmail.com>
+Date:   Sun May 16 19:46:31 2021 +0800
+
+    Merge branch 'main' of https://github.com/timpye/CITS3403-Website
+
+commit be263b5aecc0538c559e59f6918d307884fa7fdc
+Merge: d96f5e5 611dcd5
+Author: timpye <72972212+timpye@users.noreply.github.com>
+Date:   Sun May 16 19:45:29 2021 +0800
+
+    Merge branch 'main' of https://github.com/timpye/CITS3403-Website into main
+
+commit 7f4e4f0e20e23b6971a37a2b44dd8e06e1b95aa7
+Author: jakobdorian <79760777+jakobdorian@users.noreply.github.com>
+Date:   Sun May 16 19:41:08 2021 +0800
+
+    Revert "added storage content"
+    
+    This reverts commit 611dcd5fd9897137636621d0d1002297971740fe.
+
+commit d96f5e522642b06c850097ef48bde4f9d55be854
+Author: timpye <72972212+timpye@users.noreply.github.com>
+Date:   Sun May 16 19:40:42 2021 +0800
+
+    datetime migration
+
+commit 611dcd5fd9897137636621d0d1002297971740fe
+Author: jakobdorian <79760777+jakobdorian@users.noreply.github.com>
+Date:   Sun May 16 19:38:41 2021 +0800
+
+    added storage content
+
+commit 5c1f51c6a0dc8c7d2ebc5fa88535f373be8f8b88
+Author: anferneealviar99 <anferneealviar99@hotmail.com>
+Date:   Sun May 16 19:21:32 2021 +0800
+
+    motherboard content paragraph styling
+
+commit 56c982564b5b9f93c0bf3ab70c9925eac3f735e1
+Author: anferneealviar99 <anferneealviar99@hotmail.com>
+Date:   Sun May 16 19:20:13 2021 +0800
+
+    small mistake on motherboard route fixed
+
+commit 2c264c636539c72b22ba69a5c65f36680d165e4a
+Author: anferneealviar99 <anferneealviar99@hotmail.com>
+Date:   Sun May 16 19:19:37 2021 +0800
+
+    motherboard content
+
+commit 75cee0a448d78fa300b416eeeb9bd57f69683dff
+Author: anferneealviar99 <anferneealviar99@hotmail.com>
+Date:   Sun May 16 19:00:06 2021 +0800
+
+    added motherboard to routes.py
+
+commit 76b2f3053b6cb7d9a21c77ba8ca966a3f9944fa3
+Author: anferneealviar99 <anferneealviar99@hotmail.com>
+Date:   Sun May 16 18:58:57 2021 +0800
+
+    Added motherboard
+
+commit 8b142f914d8dcb1509b8190fe737bb8f163e1586
+Author: anferneealviar99 <anferneealviar99@hotmail.com>
+Date:   Sun May 16 18:54:34 2021 +0800
+
+    Computer parts 101
+
+commit f28dc78e92f5898bc5edbde99bb23846bce1c1bd
+Author: timpye <72972212+timpye@users.noreply.github.com>
+Date:   Sun May 16 18:20:24 2021 +0800
+
+    Added more stats and datetime to db
+
+commit 986612f44909077b3780757166df67faa33df88d
+Author: timpye <72972212+timpye@users.noreply.github.com>
+Date:   Sun May 16 18:17:58 2021 +0800
+
+    Quiz accessible to logged in
+    
+    Minor style changes
+
+commit 38825fe3b512a355ea919b2d4b9d49be4fa7c0ef
+Author: timpye <72972212+timpye@users.noreply.github.com>
+Date:   Sun May 16 16:48:43 2021 +0800
+
+    Statistics page filled with data
+
+commit 39501fbf23783f7353d4509606c42f03b023f004
+Author: jakobdorian <79760777+jakobdorian@users.noreply.github.com>
+Date:   Sun May 16 16:19:22 2021 +0800
+
+    added content for GPU
+
+commit 9372ab680c6c0040e3b8bef21af3b1932b2957c6
+Author: jakobdorian <79760777+jakobdorian@users.noreply.github.com>
+Date:   Sun May 16 15:22:26 2021 +0800
+
+    added RAM to content
+
+commit bc46fd1eb0e64191ac3f5111002fc29b8662e048
+Author: anferneealviar99 <anferneealviar99@hotmail.com>
+Date:   Sun May 16 11:59:41 2021 +0800
+
+    More information in cpu.html
+
+commit 845edb3401f2edba8092e40d0c12869b204af25b
+Author: anferneealviar99 <anferneealviar99@hotmail.com>
+Date:   Sun May 16 11:52:23 2021 +0800
+
+    Added tests.py
+
+commit ccd6b99f30bbbb83b71c3f6f50b96eee372ad8bb
+Author: anferneealviar99 <anferneealviar99@hotmail.com>
+Date:   Sun May 16 11:35:55 2021 +0800
+
+    added gpu route to routes.py
+
+commit 686efe32191ac512d66b2ae1a4315c96d3ac10c7
+Author: anferneealviar99 <anferneealviar99@hotmail.com>
+Date:   Sun May 16 11:34:10 2021 +0800
+
+    small change to cpu
+
+commit 8d574ae05bffbdb694caf187a63ee14c38c87667
+Author: jakobdorian <79760777+jakobdorian@users.noreply.github.com>
+Date:   Sat May 15 22:23:06 2021 +0800
+
+    small color change to navbar
+
+commit b41a2860ae721cbd92537136a44566d3df9f776c
+Author: timpye <72972212+timpye@users.noreply.github.com>
+Date:   Sat May 15 21:50:19 2021 +0800
+
+    Integrated Results into database
+
+commit 198fe1fe833b2715d5ce2659b34551d5e1a11b96
+Author: anferneealviar99 <anferneealviar99@hotmail.com>
+Date:   Sat May 15 18:03:13 2021 +0800
+
+    added gpu.html
+
+commit 57f2b70c922af219dff4727f3198b1fc5daff4dd
+Author: anferneealviar99 <anferneealviar99@hotmail.com>
+Date:   Sat May 15 15:52:13 2021 +0800
+
+    Small additions
+
+commit 3618b9f899aed1240c7c9382304f80bf92ed1753
+Author: anferneealviar99 <anferneealviar99@hotmail.com>
+Date:   Sat May 15 12:07:31 2021 +0800
+
+    Small changes
+
+commit c567d4c1d76d7a75f316fa18d3b55aa498d301a5
+Author: anferneealviar99 <anferneealviar99@hotmail.com>
+Date:   Sat May 15 12:04:50 2021 +0800
+
+    Cut and pasted Roboto font style inclusion into appropriate block and CPU html edits
+
+commit c14bcda018ef75bda28170fdb02e88069a21239c
+Author: anferneealviar99 <anferneealviar99@hotmail.com>
+Date:   Sat May 15 11:56:42 2021 +0800
+
+    Added CPU page
+
+commit 7ea760d6a3cb22b4db94c9eceb1a5fb6ae2a8023
+Author: anferneealviar99 <anferneealviar99@hotmail.com>
+Date:   Sat May 15 11:46:34 2021 +0800
+
+    Small change
+
+commit 70d6a9e81690de58ce6c14b8388d180c6faaf426
+Merge: 9a98747 b535dd7
+Author: anferneealviar99 <anferneealviar99@hotmail.com>
+Date:   Sat May 15 11:44:07 2021 +0800
+
+    Merge branch 'main' of https://github.com/timpye/CITS3403-Website
+
+commit b535dd76defa4931bd5dbe4736a60ec97ce799db
+Author: jakobdorian <79760777+jakobdorian@users.noreply.github.com>
+Date:   Sat May 15 11:05:52 2021 +0800
+
+    small tweaks
+
+commit 9a98747eff336e410dbef9c59b00407c60fcfd96
+Author: anferneealviar99 <anferneealviar99@hotmail.com>
+Date:   Sat May 15 11:05:29 2021 +0800
+
+    Trying to do SPA for content.html and added something for content_img id style
+
+commit 388e1bc5c5c5abf9a3c08472760182614ea70de5
+Author: jakobdorian <79760777+jakobdorian@users.noreply.github.com>
+Date:   Sat May 15 11:02:07 2021 +0800
+
+    small tweaks
+
+commit f6bb23a9794e9e045cdd1e3e0946a74e37354228
+Author: jakobdorian <79760777+jakobdorian@users.noreply.github.com>
+Date:   Sat May 15 01:11:13 2021 +0800
+
+    completed base quiz w/ single and multiple choice
+
+commit 364659891bd25681f190c4cb7390cf9fec7dff26
+Author: jakobdorian <79760777+jakobdorian@users.noreply.github.com>
+Date:   Fri May 14 22:03:46 2021 +0800
+
+    small tweak
+
+commit 301b64e08151c41a2187d0cd03bd838629076c30
+Author: jakobdorian <79760777+jakobdorian@users.noreply.github.com>
+Date:   Fri May 14 21:27:58 2021 +0800
+
+    small tweaks, added some content to index
+
+commit 2a4c7d6b4b58af444a4761861fa3468751aae528
+Author: anferneealviar99 <anferneealviar99@hotmail.com>
+Date:   Fri May 14 15:40:31 2021 +0800
+
+    small stylesheet changes
+
+commit f08bece50bd357f04d827ee55eaae9b1a721a3dc
+Author: anferneealviar99 <anferneealviar99@hotmail.com>
+Date:   Fri May 14 15:39:55 2021 +0800
+
+    added img-responsive class to images
+
+commit 816afec2466ab9a8ffc8559f15497ab0e734aecd
+Author: anferneealviar99 <anferneealviar99@hotmail.com>
+Date:   Fri May 14 15:29:31 2021 +0800
+
+    added alt text for all content image
+
+commit 2fff0fdb7b86c74ab975937d56aa5e5b4468112a
+Author: anferneealviar99 <anferneealviar99@hotmail.com>
+Date:   Fri May 14 15:26:58 2021 +0800
+
+    content_img class to accommodate for resizing browsers
+
+commit 23f091788e27e1989920f179be6ae2eb5385f18a
+Author: anferneealviar99 <anferneealviar99@hotmail.com>
+Date:   Fri May 14 15:21:34 2021 +0800
+
+    changed div class to container-flud
+
+commit 874d29e8d73ac6da8d67472be3283049a65311e7
+Author: anferneealviar99 <anferneealviar99@hotmail.com>
+Date:   Fri May 14 15:10:38 2021 +0800
+
+    login required to access quiz and submission
+
+commit b3ce4343016951589dfe6780834e03a3bafb3e94
+Author: anferneealviar99 <anferneealviar99@hotmail.com>
+Date:   Fri May 14 15:07:22 2021 +0800
+
+    changed names of images to correspond to files in content.html
+
+commit 258e65303fcffe7de00d1a2dfe24acaa0a574863
+Author: anferneealviar99 <anferneealviar99@hotmail.com>
+Date:   Fri May 14 15:06:48 2021 +0800
+
+    added filetypes to images
+
+commit 17d89ef2801a5db8bba7e4eb882c2dcfa5c12133
+Author: anferneealviar99 <anferneealviar99@hotmail.com>
+Date:   Fri May 14 15:04:17 2021 +0800
+
+    added < to roboto font link
+
+commit 98f3eb69411befbfdf1a470e05ba88b2190d83e0
+Author: jakobdorian <79760777+jakobdorian@users.noreply.github.com>
+Date:   Fri May 14 13:18:29 2021 +0800
+
+    small changes
+
+commit 3d6fc7dda615ae16b70175eceb208f7c6e68adc8
+Author: timpye <72972212+timpye@users.noreply.github.com>
+Date:   Fri May 14 10:27:46 2021 +0800
+
+    database changes
+
+commit 17ba56c862ea615ff04a493a5ee77caac2959af4
+Author: timpye <72972212+timpye@users.noreply.github.com>
+Date:   Thu May 13 20:00:42 2021 +0800
+
+    added images to content
+
+commit 54f4ccb5f835bd0ba750f1e19066fb2ffcd3a13d
+Author: timpye <72972212+timpye@users.noreply.github.com>
+Date:   Thu May 13 18:55:33 2021 +0800
+
+    Added style and content
+
+commit b7ba0a70c7fe0423446d73cba9d56abc9b22388d
+Author: jakobdorian <79760777+jakobdorian@users.noreply.github.com>
+Date:   Thu May 13 16:06:20 2021 +0800
+
+    added first 5 questions
+
+commit 56b1be4ee163c3ef2ac73c40f2e1504b5c00f507
+Author: anferneealviar99 <anferneealviar99@hotmail.com>
+Date:   Tue May 11 21:44:54 2021 +0800
+
+    Redone coords to account for padding
+
+commit 637c449d039f6f611ca2ca5c8d7a51f6e7dc09b7
+Author: anferneealviar99 <anferneealviar99@hotmail.com>
+Date:   Tue May 11 21:24:30 2021 +0800
+
+    Error correction
+
+commit c9d192a002b540ca9343bcd1b8bd6ce888f6cac1
+Author: anferneealviar99 <anferneealviar99@hotmail.com>
+Date:   Tue May 11 21:21:23 2021 +0800
+
+    Added ram.html
+
+commit d75a633efd1560fd79a434a30cd08f014d345be0
+Author: anferneealviar99 <anferneealviar99@hotmail.com>
+Date:   Tue May 11 21:20:20 2021 +0800
+
+    Added ram route
+
+commit 2d5a515467d0a5280cfeb9056ca060b58e64af1c
+Author: anferneealviar99 <anferneealviar99@hotmail.com>
+Date:   Tue May 11 21:19:18 2021 +0800
+
+    Added mapping for RAM in image
+
+commit 3997ef588dfe7cefefecdc88493fe0939c050584
+Author: anferneealviar99 <anferneealviar99@hotmail.com>
+Date:   Tue May 11 21:13:13 2021 +0800
+
+    Edited index.html
+
+commit 6e0a43bcb52db45624a7b498f5761a72955c1811
+Author: timpye <72972212+timpye@users.noreply.github.com>
+Date:   Tue May 11 19:20:00 2021 +0800
+
+    database update results table
+
+commit 12c9108a4c0bfda2ca0714c36f04f55cf743dae1
+Author: timpye <72972212+timpye@users.noreply.github.com>
+Date:   Tue May 11 18:09:47 2021 +0800
+
+    Added migrations folder and styling
+
+commit 2f4eacfb1136fc8a4c935109574f53e4e40a7d57
+Author: timpye <72972212+timpye@users.noreply.github.com>
+Date:   Tue May 11 17:16:05 2021 +0800
+
+    deleted unnecessary files
+
+commit 988734d24099df95162a927226c83f85b3ea7619
+Author: anferneealviar99 <anferneealviar99@hotmail.com>
+Date:   Mon May 10 20:59:23 2021 +0800
+
+    Added one small comment
+
+commit 5b09143ae0df3351fbe4cdb94091f708f81bf2ef
+Author: anferneealviar99 <anferneealviar99@hotmail.com>
+Date:   Mon May 10 20:58:16 2021 +0800
+
+    Added CSS styling and edited some files
+
+commit 61248baed92154b828c24e9e18ba7d31dee76a48
+Author: anferneealviar99 <anferneealviar99@hotmail.com>
+Date:   Mon May 10 20:29:31 2021 +0800
+
+    Added image and started mapping the image
+
+commit 2c45bb49e86e6fcf7b8e686e676babe7deda742c
+Author: anferneealviar99 <anferneealviar99@hotmail.com>
+Date:   Mon May 10 19:50:35 2021 +0800
+
+    indenting
+
+commit edbd075beec6b455042d1f37c450df3e4f1f2339
+Author: jakobdorian <79760777+jakobdorian@users.noreply.github.com>
+Date:   Mon May 10 12:45:18 2021 +0800
+
+    added submission html
+
+commit 01ff841831fff517dae4d1734d1895d89b7fcf5e
+Author: jakobdorian <79760777+jakobdorian@users.noreply.github.com>
+Date:   Sun May 9 16:48:10 2021 +0800
+
+    added basic form for the quiz
+
+commit 9353698f28dd420e34546ab815fc104d57471629
+Author: jakobdorian <79760777+jakobdorian@users.noreply.github.com>
+Date:   Sat May 8 18:17:37 2021 +0800
+
+    moved stylesheet to static folder
+
+commit 3e547be7b3e58658ce2bc2a259695d3904cfcdaa
+Author: anferneealviar99 <anferneealviar99@hotmail.com>
+Date:   Fri May 7 11:53:13 2021 +0800
+
+    Added Register option to navbar
+
+commit dcf9ea69b463d4a5a12b5398938ddcb0ec138e62
+Author: timpye <72972212+timpye@users.noreply.github.com>
+Date:   Thu May 6 14:15:33 2021 +0800
+
+    Update Flask environment variables
+
+commit 548c2a193dadb0fb5720d9bcc1a1825d570ff1e6
+Author: jakobdorian <79760777+jakobdorian@users.noreply.github.com>
+Date:   Thu May 6 13:42:59 2021 +0800
+
+    added static folder for images
+
+commit 097d4eeb1dd0918137d222b5d0b4322f183d6fbf
+Author: jakobdorian <79760777+jakobdorian@users.noreply.github.com>
+Date:   Wed May 5 15:17:43 2021 +0800
+
+    updated requirements.txt
+
+commit 11f3f4bc53060320e28a068f49174f2b402fb09c
+Author: jakobdorian <79760777+jakobdorian@users.noreply.github.com>
+Date:   Tue May 4 22:25:52 2021 +0800
+
+    added models.py
+
+commit 48151e6d67b137e6081d2c1298b412177fc3da64
+Author: jakobdorian <79760777+jakobdorian@users.noreply.github.com>
+Date:   Tue May 4 22:13:37 2021 +0800
+
+    added basic bootstrap framework
+
+commit 6fdd3d15b16bf646f083178f0c67c96719b20340
+Author: jakobdorian <79760777+jakobdorian@users.noreply.github.com>
+Date:   Mon May 3 23:39:30 2021 +0800
+
+    small changes
+
+commit 258fe3aa4ff5e1862da11c9a9738238472beabee
+Author: jakobdorian <79760777+jakobdorian@users.noreply.github.com>
+Date:   Mon May 3 23:01:54 2021 +0800
+
+    fixed a mistake of mine mb
+
+commit 08cdacdcda2446a98ddeb451c97c100623029c0a
+Author: jakobdorian <79760777+jakobdorian@users.noreply.github.com>
+Date:   Mon May 3 22:55:25 2021 +0800
+
+    added register template
+
+commit a48e94460d76aa698c917bcc54f9ce9aee8f49dc
+Author: jakobdorian <79760777+jakobdorian@users.noreply.github.com>
+Date:   Mon May 3 22:49:16 2021 +0800
+
+    added register form
+
+commit a52ee0eec38b29a1f7db68a7db0514062889cfdb
+Author: anferneealviar99 <49297762+anferneealviar99@users.noreply.github.com>
+Date:   Mon May 3 19:12:35 2021 +0800
+
+    Delete forms.py
+
+commit ce9716bcf83f3e9c1904fadb81f10e520e008c99
+Author: anferneealviar99 <anferneealviar99@hotmail.com>
+Date:   Mon May 3 19:09:49 2021 +0800
+
+    Login form stuff
+
+commit 370ababf21175409c5400a341d98bc417deb5496
+Author: anferneealviar99 <anferneealviar99@hotmail.com>
+Date:   Mon May 3 18:33:30 2021 +0800
+
+    import LoginForm from app.forms
+
+commit dc5ca6264dfa5820a91f9974d38a5e7fb098caec
+Author: anferneealviar99 <anferneealviar99@hotmail.com>
+Date:   Mon May 3 18:32:59 2021 +0800
+
+    forms.py
+
+commit a063e376d7682c1564953c9f693cdad4b051923b
+Author: anferneealviar99 <anferneealviar99@hotmail.com>
+Date:   Mon May 3 18:31:25 2021 +0800
+
+    added flask_login imports and LoginForm() to routes.py
+
+commit e8da7b92ab4484dbf059f6bef88a84fc132259f9
+Author: anferneealviar99 <anferneealviar99@hotmail.com>
+Date:   Mon May 3 18:28:50 2021 +0800
+
+    login.html shown forms
+
+commit a707626ca4a7a7a0b3464cd5949a51c57e950b3a
+Author: anferneealviar99 <anferneealviar99@hotmail.com>
+Date:   Mon May 3 18:24:20 2021 +0800
+
+    Added forms.py to login branch
+
+commit cebcab084b1427df8f10a784c3a16f5e4d172d02
+Author: anferneealviar99 <anferneealviar99@hotmail.com>
+Date:   Mon May 3 18:15:49 2021 +0800
+
+    Added WTForms to requirements.txt
+
+commit 81c325bf043590ac0788a4fc5b1fc5b85cb50305
+Author: anferneealviar99 <anferneealviar99@hotmail.com>
+Date:   Mon May 3 18:12:34 2021 +0800
+
+    Small error edited on routes.py
+
+commit a7c86795c0a39663fb24968dfe5e864615ade19e
+Author: timpye <72972212+timpye@users.noreply.github.com>
+Date:   Mon May 3 16:13:02 2021 +0800
+
+    Added routes to pages in website
+
+commit b18c0f765969bb7b8d9938d7422b935abc709a2f
+Author: jakobdorian <79760777+jakobdorian@users.noreply.github.com>
+Date:   Sat May 1 16:59:12 2021 +0800
+
+    added html templates
+
+commit 0b2f381995bade9645ccbef5248f48ce74a2fddd
+Author: timpye <72972212+timpye@users.noreply.github.com>
+Date:   Sat May 1 10:48:45 2021 +0800
+
+    Added basic Flask framework
+    
+    flask run now runs a flask app which generates a basic landing page for our website
+
+commit d4d180ae0d4b940dbb11cb57c6f1413c8b07bc7a
+Author: timpye <72972212+timpye@users.noreply.github.com>
+Date:   Wed Apr 28 16:21:12 2021 +0800
+
+    added .flaskenv and dotenv to requirements
+    
+    Added dotenv so that flask environment variables can carry between sessions
+
+commit e58becaf4cb9b45ed0e601b3087509aa7b158d9f
+Merge: 181aa44 8ce004e
+Author: timpye <72972212+timpye@users.noreply.github.com>
+Date:   Wed Apr 28 14:37:09 2021 +0800
+
+    Merge branch 'main' of https://github.com/timpye/CITS3403-Website into main
+
+commit 8ce004e715fda86dd33ca288fa5ffdbfc3099346
+Author: jakobdorian <79760777+jakobdorian@users.noreply.github.com>
+Date:   Wed Apr 28 14:13:33 2021 +0800
+
+    test commit
+
+commit e41e1d67c7f0c2375c84a2ab8879a81d8f4ec264
+Author: jakobdorian <79760777+jakobdorian@users.noreply.github.com>
+Date:   Wed Apr 28 14:09:45 2021 +0800
+
+    added config file
+
+commit 8dcfeb0f7ff928273e38d83e57e509a6b1421b87
+Author: anferneealviar99 <anferneealviar99@hotmail.com>
+Date:   Wed Apr 28 13:53:35 2021 +0800
+
+    Added initialisation
+
+commit 181aa440614385091ca400fdd840598ad7dee236
+Author: timpye <72972212+timpye@users.noreply.github.com>
+Date:   Wed Apr 28 11:46:53 2021 +0800
+
+    Update .gitignore
+    
+    Ignoring venv directory
+
+commit 8a1aa4076e737125821723416d3141912848abcc
+Author: jakobdorian <79760777+jakobdorian@users.noreply.github.com>
+Date:   Thu Apr 22 11:04:15 2021 +0800
+
+    added sqlite to requirements
+
+commit 4bf0179c0a9702a46a9ea4b97383e50a4cc06bca
+Author: anferneealviar99 <anferneealviar99@hotmail.com>
+Date:   Wed Apr 21 23:06:26 2021 +0800
+
+    Added requirements.txt
+
+commit 10e4ed6d0734995c733c227b29b03903c763f3bb
+Author: jakobdorian <79760777+jakobdorian@users.noreply.github.com>
+Date:   Wed Apr 21 20:00:11 2021 +0800
+
+    test
+
+commit ff8ce969b7120f1919576f6915a5d7d1e443d3de
+Merge: fa15e1d 16444b4
+Author: anferneealviar99 <anferneealviar99@hotmail.com>
+Date:   Wed Apr 21 15:49:52 2021 +0800
+
+    Merge branch 'main' of https://github.com/timpye/CITS3403-Website into main
+
+commit fa15e1d58b0c8bfedbf0ea15098577560069cee2
+Author: anferneealviar99 <anferneealviar99@hotmail.com>
+Date:   Wed Apr 21 15:47:12 2021 +0800
+
+    Testing
+
+commit 16444b4d1ae751179f77360054f58beae784852b
+Author: timpye <timpyeni@gmail.com>
+Date:   Wed Apr 21 15:39:05 2021 +0800
+
+    Added basic files for framework
+
+commit 8ac61f411d028e2a1cc29cf0169aad45bf9b1c39
+Author: timpye <72972212+timpye@users.noreply.github.com>
+Date:   Wed Apr 21 15:24:32 2021 +0800
+
+    Initial commit
