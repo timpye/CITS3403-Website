@@ -1,5 +1,5 @@
 # CITS3403 Project 1 Website
-Computer Parts 101
+Computing Building 101
 
 # Description 
 This is our group project submission for CITS3403 Agile Web Development.
@@ -52,17 +52,11 @@ Then you must install all the requirements for this application by simply enteri
 $ pip install -r requirements.txt
 ```
 
-### Initialising the database ###
-After installing all the prerequisites the database needs to be initialised with
-```
-$ flask db init
-```
-
 ### Deployment ###
 run the app with 
-```
-$ flask run
-```
+'''
+flask run
+'''
 The app should now be running at localhost port 5000
 
 ### Built with ###
