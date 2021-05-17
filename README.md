@@ -51,6 +51,28 @@ Then you must install all the requirements for this application by simply enteri
 ```
 $ pip install -r requirements.txt
 ```
+
+### Initialising the database ###
+After installing all the prerequisites the database needs to be initialised with
+'''
+flask db init
+'''
+
+### Deployment ###
+run the app with 
+'''
+flask run
+'''
+The app should now be running at localhost port 5000
+
+### Built with ###
+VSCode and Github Desktop
+
+### Authors ###
+Anfernee Alviar
+Jakob Kuriata
+Timothy Pye
+
 # Resources
 https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world
 
