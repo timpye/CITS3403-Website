@@ -36,7 +36,7 @@ def login():
             next_page = url_for('index')
         return redirect(next_page)
     return render_template('login.html', title='Sign In', form=form)
-
+# single mutliple choice question 
 class Question:
     q_id = -1
     question= ""
@@ -75,7 +75,7 @@ q7 = Question(7, "(7). What do you call the slots that you put the RAM into?", "
 
 q_list = [q1, q2, q3, q4, q5, q6, q7]
 
-
+# mutli-choice mutliple choice question 
 class Question2:
     q_id = -1
     question= ""
@@ -142,12 +142,12 @@ q10 = Question2(10, "(10). Check all the important considerations in terms of pe
 
 q2_list = [q8, q9, q10]
 
-
+#returns quiz html
 @login_required
 @app.route('/quiz')
 def quiz():
     return render_template('quiz.html', title = 'Quiz', q_list = q_list, q2_list = q2_list)
-
+# returns submission html
 @login_required
 @app.route("/submission", methods=['POST', 'GET'])
 def submit():
@@ -203,7 +203,7 @@ def submit():
     return render_template('submission.html', title = 'Submission', message = message)
         
 
-
+# returns stats html and calculates stats using the database
 @app.route('/stats')
 def stats():
     user_results = []
@@ -238,66 +238,67 @@ def stats():
     every_result = every_result, average_mark = average_mark, total_users = total_users, 
     quizzes_today = quizzes_today, score_today = score_today)
 
+# returns content html
 @app.route('/content')
 def content():
     return render_template('content.html', title = 'Content')
-
+# returns cpu html
 @app.route('/cpu')
 def cpu():
     return render_template('cpu.html', title='CPU (Central Processing Unit')
-
+# returns motherboard html
 @app.route('/motherboard')
 def motherboard():
     return render_template('motherboard.html', title='Motherboard')
-
+# returns gpu html
 @app.route('/gpu')
 def gpu():
     return render_template('gpu.html', title='GPU (Graphical Processing Unit)')
-
+# returns ram html
 @app.route('/ram')
 def ram():
     return render_template('ram.html', title='RAM')
-
+# returns storage html
 @app.route('/storage')
 def storage():
     return render_template('storage.html', title='Storage')
-
+# returns peripheral html
 @app.route('/peripheral')
 def peripheral():
     return render_template('peripheral.html', title='Peripheral')
-
+# returns psu html
 @app.route('/psu')
 def psu():
     return render_template('psu.html', title='Power Supply')
-
+# returns cpu quiz html
 @app.route('/cpuquiz')
 def cpuquiz():
     return render_template('cpuquiz.html', title='CPU Quiz')
-
+# returns gpu quiz html
 @app.route('/gpuquiz')
 def gpuquiz():
     return render_template('gpuquiz.html', title='GPU Quiz')
-
+# returns mobo quiz html
 @app.route('/moboquiz')
 def moboquiz():
     return render_template('moboquiz.html', title='Motherboard Quiz')
-
+# returns psu quiz html
 @app.route('/psuquiz')
 def psuquiz():
     return render_template('psuquiz.html', title='PSU Quiz')
-
+# returns ram quiz html
 @app.route('/ramquiz')
 def ramquiz():
     return render_template('ramquiz.html', title='RAM Quiz')
-
+# returns peripheral quiz html
 @app.route('/peripheralquiz')
 def peripheralquiz():
     return render_template('peripheralquiz.html', title='Peripheral Quiz')
-
+# returns storage quiz html
 @app.route('/storagequiz')
 def storagequiz():
     return render_template('storagequiz.html', title='Storage Quiz')
-
+# returns feedback html and calculates feedback based on the current user
 @app.route('/feedback')
 def feedback():
     q1_data = []
@@ -321,7 +322,7 @@ def feedback():
         i += 1
     print(q1_data,q2_data)
     return render_template('feedback.html', title = 'Feedback', q1_data = q1_data, q2_data = q2_data, complete = completed)
-
+# registers users into the database
 @app.route('/register', methods=['GET', 'POST'])
 def register():
     if current_user.is_authenticated:
@@ -335,7 +336,7 @@ def register():
         flash('Congratulations, you are now a registered user!')
         return redirect(url_for('login'))
     return render_template('register.html', title='Register', form=form)
-
+# logout users
 @app.route('/logout')
 def logout():
     logout_user()
