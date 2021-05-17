@@ -5,12 +5,26 @@
     border: 50px;
 }
 
+.content_img {
+    width: 50%;
+    height: 50%;
+}   
+
 h1 {
     padding-left: 50px;
 }
 
+h2 {
+    padding-left: 50px;
+}
+
+.content_p {
+    padding-left: 50px;
+    font-size: 20px;
+}
+
 .navbar {
-    background-color: violet;
+    background-color: navajowhite;
 }
 
 .heading {
@@ -27,7 +41,25 @@ body {
     font-family: 'Roboto' ;
 }
 
-.content_block {
-    height = 100px;
-    width = 280px;
+.sub {
+    padding: 80px;
+    width: 800px;
+    margin: auto;
+    font-size: large;
+    height: 800px;
+    text-align: center;
+}
+
+.ind {
+    padding: 80px;
+    width: 800px;
+    margin: auto;
+    font-size: large;
+    height: 800px;
+    text-align: center;
+}
+
+.cen{
+    margin:auto;
+    display:block;
 }

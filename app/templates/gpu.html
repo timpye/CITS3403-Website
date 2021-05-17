@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+
+{% block content %} 
+    <div id="GPU_header">
+        <h1>
+            GPU (Graphical Processing Unit)
+        </h1>
+        <img class='img-responsive' src = 'static\images\GPU.jpg' alt="GPU (Graphical Processing Unit)" style="width: 640px; height: 480px; padding-left: 50px; ">
+    </div>
+    <div id="GPU_description">
+        <h2>
+            Description
+        </h2>
+        <p class="content_p">
+            The Graphical Processing Unit or GPU, is an expansion card used to generate a feed of output images to a monitor or other display device. GPU's are
+            capable of many different tasks from playing video games to deep learning. The GPU is able to break complex problems into millions of seperate tasks which
+            are all processed at the same time, which makes the GPU ideal for things like shiny graphics, as textures and the rendering of shapes have to all be
+            processed at the same time in order to keep images flying across the screen.
+        </p>    
+    </div>
+
+    <div id="GPU_install">
+        <h2>
+            Installation
+        </h2>
+        <p class="content_p"> 
+            All you need:
+           <ul style="font-size: 20px; padding-left:70px;">
+            <li>A graphics card</li>
+            <li>A PC</li>
+            <li>Phillips-head screwdriver</li>
+            <br>
+            Steps:
+            
+            <li> Unscrew the retention bracket on the rear interior of your PC case.</li>
+            <li> Place the GPU into the PCIe x16 slot of your motherboard.</li>
+            <li> Plug in the PCIe power cables from your power supply into your GPU.</li>
+            <li> Screw the rentention bracket from before back on to the rear interior of your PC case so that your GPU can sit there firmly.</li>
+            <li> Boot into your chosen OS and install your respective graphic card drivers.</li>
+
+            </ul>
+        </p>
+    </div>
+
+    <div id="GPU_recommendation">
+        <h2>
+            Recommendation
+        </h2>
+        <p class="content_p"> 
+            Depending on your computer needs, there is a lot to consider when picking GPU, gamers usually want the most frames and pretty graphics, so they will typically
+            buy the standard gaming focused graphics cards, those currently being RTX or RX series from Nvidia and AMD respectivly. However professionals in specfic fields
+            such as computer aided design (CAD), computer-generated imagery(CGI) or digital content creation(DCC) will often go for the Quadro or Radeon Pro series line of 
+            graphics cards from Nvidia and AMD respectively, as those cards were designed with those specific tasks in mind for workstations.
+        </p>
+    </div>
+{% endblock %}

@@ -9,6 +9,9 @@ class User(UserMixin, db.Model):
     username = db.Column(db.String(64), index=True, unique=True)
     email = db.Column(db.String(120), index=True, unique=True)
     password_hash = db.Column(db.String(128))
+    day_joined = db.Column(db.DateTime())
+    completed_quiz = db.Column(db.Boolean)
+    
 
     def __repr__(self):
         return '<User {}>'.format(self.username)
@@ -18,6 +21,12 @@ class User(UserMixin, db.Model):
     
     def check_password(self, password):
         return check_password_hash(self.password_hash, password)
+
+    def set_day_joined(self):
+        self.day_joined = datetime.today()
+
+    def complete_quiz(self):
+        self.completed_quiz = True
     
     @login.user_loader
     def load_user(id):
@@ -27,7 +36,45 @@ class Result(UserMixin, db.Model):
     id = db.Column(db.Integer, primary_key=True)
     user_id = db.Column(db.Integer, db.ForeignKey("user.id"))
     num_correct = db.Column(db.Integer)
-    
+    first_correct = db.Column(db.Boolean)
+    second_correct = db.Column(db.Boolean)
+    third_correct = db.Column(db.Boolean)
+    fourth_correct = db.Column(db.Boolean)
+    fifth_correct = db.Column(db.Boolean)
+    sixth_correct = db.Column(db.Boolean)
+    seventh_correct = db.Column(db.Boolean)
+    eigth_correct = db.Column(db.Boolean)
+    ninth_correct = db.Column(db.Boolean)
+    tenth_correct = db.Column(db.Boolean) 
+    date_created = db.Column(db.DateTime())
 
     def __repr__(self):
-        return '<{} result {}>'.format(self.user_id, self.num_correct)
+        return '<{}>'.format(self.num_correct)
+
+    def add_results(self, results_list, score):
+        self.num_correct = score
+        num = 0
+        self.first_correct = results_list[num]
+        num += 1
+        self.second_correct = results_list[num]
+        num += 1
+        self.third_correct = results_list[num]
+        num += 1
+        self.fourth_correct = results_list[num]
+        num += 1
+        self.fifth_correct = results_list[num]
+        num += 1
+        self.sixth_correct = results_list[num]
+        num += 1
+        self.seventh_correct = results_list[num]
+        num += 1
+        self.eigth_correct = results_list[num]
+        num += 1
+        self.ninth_correct = results_list[num]
+        num += 1
+        self.tenth_correct = results_list[num]
+        num += 1
+
+        
+
+        

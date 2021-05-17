@@ -1,9 +1,31 @@
 {% extends "base.html "%}
 
 {% block content %}
+    <div class = "ind">
     {%if current_user.is_authenticated %}
-    <h1>Hi, {{ current_user.username }}!</h1>
+    <h1>Welcome to Computer Building 101!</h1>
     {% else %}
     <h1>Welcome to Computer Building 101!</h1>
     {% endif %}
+    
+    <p>
+    Computer Building 101 is a flask application we made for our CITS3403 Project, we designed
+    it to educate users on the basics on PCs and the components that make them work.
+    To begin, you must register an account, then read through our content before taking a 10 question
+    quiz to assess your knowledge of Computer Building. Good luck!
+    </p>
+
+
+    {%if current_user.is_authenticated %}
+    <button type="button" onclick="window.location.href='content';" class = "cen">
+    Get started!
+    </button>
+    {% else %}
+    <button type="button" onclick="window.location.href='register';" class = "cen">
+    Get started!
+    </button>
+    {% endif %}
+
+    </div>
+
 {% endblock %}

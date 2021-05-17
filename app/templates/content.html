@@ -2,43 +2,38 @@
 
 {% block content %}
     <h1>Content</h1>
-    <img class="pc_sideview" src='static\images\pc_sideview.png' alt="PC Sideview" usemap="#partsmap"  >
+    <img class="pc_sideview" src='static\images\pc_sideview.png' alt="PC Sideview">
 
-    <map name='partsmap'>
-        <area target="_self" alt="Graphics Card" title="Graphics Card" onclick="document.getElementById('graphics_card').style.display='none'" href=# coords="483,355,133,292" shape="rect">
-        <area target="_self" alt="RAM" title="RAM" href= "{{ url_for('ram') }}" coords="318,134,366,285" shape="rect">   
-    </map>
-    <div class = 'container'>
+    <div class = 'container-fluid' onload = "showContentList">
         <div class = "content_block" id="CPU">
-            <h1>CPU</h1>
-            <img src = 'static\images\CPU.jpg'>
+            <a href="{{ url_for('cpu') }}"><h1>CPU (Computer Processing Unit)</h1></a>
+            <img class='img-responsive' src = 'static\images\CPU.jpg' alt="CPU (Central Processing Unit">
+        </div>
+        <div class = "content_block" id="motherboard">
+            <a href="{{ url_for('motherboard') }}"><h1>Motherboard</h1></a>
+            <img class='img-responsive' src = 'static\images\motherboard.jpg' alt="Motherboard">
         </div>
         <div class = "content_block" id="GPU">
-            <h1>GPU</h1>
-            <img src = 'static\images\GPU.jpg'>
+            <a href="{{ url_for('gpu') }}"><h1>GPU (Graphical Processing Unit)</h1></a>
+            <img class='img-responsive' src = 'static\images\GPU.jpg' alt="GPU (Graphical Processing Unit)">
         </div>
         <div class = "content_block" id="RAM">
-            <h1>RAM</h1>
-            <img src = 'static\images\RAM.jpg'>
+            <a href="{{ url_for('ram') }}"><h1>RAM (Random Access Memory)</h1></a>
+            <img class='img-responsive' src = 'static\images\RAM.jpg' alt="RAM (Random Access Memory)">
         </div>
         <div class = "content_block" id="Storage">
-            <h1>Storage</h1>
-            <img src = 'static\images\NVME_SSD.jpg'>
+            <a href="{{ url_for('storage') }}"><h1>Storage</h1></a>
+            <img class='img-responsive' src = 'static\images\NVME_SSD.jpg' alt="Storage">
         </div>
         <div class = "content_block" id="Peripheral">
-            <h1>Peripheral</h1>
-            <img src = 'static\images\Mouse.jpg'>
-            <img src = 'static\images\Keyboard.jpg'>
+            <a href="{{ url_for('peripheral') }}"><h1>Peripheral</h1></a>
+            <img class='img-responsive' src = 'static\images\Mouse.jpg' alt="Mouse">
+            <img class='img-responsive' src = 'static\images\Keyboard.jpg' alt="Keyboard">
         </div>
-        <div class = "content_block" id="Power supply">
-            <h1>Power Supply</h1>
-            <img src = 'static\images\Power_supply.jpg'>
-        </div>
-        <div class = "content_block" id="graphics_card">
-            <h1>graphics_card</h1>
-            <img src = 'static\images\'>
+        <div class = "content_block" id="Power_Supply">
+            <a href="{{ url_for('psu') }}"><h1>Power Supply</h1></a>
+            <img class='img-responsive' src = 'static\images\Power_supply.jpg'>
         </div>
     </div>
-    
 
 {% endblock %}

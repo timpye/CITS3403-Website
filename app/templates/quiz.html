@@ -1,21 +1,53 @@
 {% extends "base.html" %}
 
-{% block content %}
-    <h1 class="heading">Quiz</h1>
-        <form action="/submission", method="post" class="quiz">
 
-            {% for question in q_list %}
-            <h2>
-                {{question.question}} <br>
-                <input type="radio" name={{question.q_id}} value="{{question.op1}}"required> {{question.op1}}
-                <input type="radio" name={{question.q_id}} value="{{question.op2}}"required> {{question.op2}}
-                <input type="radio" name={{question.q_id}} value="{{question.op3}}"required> {{question.op3}}
-                <input type="radio" name={{question.q_id}} value="{{question.op4}}"required> {{question.op4}}
+{% block content %}
+    {% if current_user.is_authenticated %}
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <div class="quiz">
+            <h1>Quiz</h1>
+            <form action="/submission", method="post" class="quiz">
+
+                {% for question in q_list %}
+                <p>
+                    {{question.question}} <br>
+                    <input type="radio" name={{question.q_id}} value="{{question.op1}}"required> {{question.op1}}<br>
+                    <input type="radio" name={{question.q_id}} value="{{question.op2}}"required> {{question.op2}}<br>
+                    <input type="radio" name={{question.q_id}} value="{{question.op3}}"required> {{question.op3}}<br>
+                    <input type="radio" name={{question.q_id}} value="{{question.op4}}"required> {{question.op4}}<br>  
+            </p>
+            {% endfor %}
             
-            </h2>
-        
-        {% endfor %}
-        <br><br>
-        <input type="submit" name="submitform" value="Submit">
-    </form>
+                {% for question in q2_list %}
+                <p>
+                    {{question.question}} <br>
+                    <input type="checkbox" name={{question.q_id}} value="{{question.op1}}"> {{question.op1}}<br>
+                    <input type="checkbox" name={{question.q_id}} value="{{question.op2}}"> {{question.op2}}<br>
+                    <input type="checkbox" name={{question.q_id}} value="{{question.op3}}"> {{question.op3}}<br>
+                    <input type="checkbox" name={{question.q_id}} value="{{question.op4}}"> {{question.op4}}<br>
+                    <input type="checkbox" name={{question.q_id}} value="{{question.op5}}"> {{question.op5}}<br>
+            </p>
+            {% endfor %}
+            
+            <br>
+            <input type="submit" name="submitform" value="Submit">
+        </form>
+        </div>
+    { %endif% }
+
+    {% else %}
+        <div class = "container sub">
+            <h2>Please Login to complete the quiz</h2>
+            <div class = "cen">
+                <a href = "login">
+                    <button>Login</button>
+                </a>
+                <a href = "register">
+                    <button>Register</button>
+                </a>
+            </div>
+           
+        </div>
+    {%endif%}
 {% endblock %}
+
