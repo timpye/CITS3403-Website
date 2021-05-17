@@ -17,18 +17,15 @@
 
 
     {%if current_user.is_authenticated %}
-    <a href= "content">
-    <button class = "cen">
+    <button type="button" onclick="window.location.href='content';" class = "cen">
     Get started!
     </button>
-    </a>
     {% else %}
-    <a href= "register">
-    <button class = "cen">
+    <button type="button" onclick="window.location.href='register';" class = "cen">
     Get started!
     </button>
-    </a>
     {% endif %}
 
     </div>
+
 {% endblock %}
