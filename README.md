@@ -46,7 +46,7 @@ $ venv\Scripts\activate
 ```
 $ source venv/bin/activate
 ```
-Then you must install all the requirments for this application by simply entering the following.
+Then you must install all the requirements for this application by simply entering the following.
 ### Windows/Mac/Linux ###
 ```
 $ pip install -r requirements.txt
