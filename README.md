@@ -30,8 +30,27 @@ $ sudo apt-get install python3.9
 
 ## Installation ##
 
+You will need to set up a virtual environment to run the application in, you can do this by creating a folder, then opening that folder with 
+your terminal, then type the following.
+```
+$ python3 -m venv venv
+```
+Then you will activate the virtual environment.
 
+### Windows ###
+```
+$ venv\Scripts\activate
+```
 
+### Mac/Linux ###
+```
+$ source venv/bin/activate
+```
+Then you must install all the requirments for this application by simply entering the following.
+### Windows/Mac/Linux ###
+```
+$ pip install -r requirements.txt
+```
 # Resources
 https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world
 
