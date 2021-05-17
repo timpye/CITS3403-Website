@@ -55,7 +55,7 @@ $ pip install -r requirements.txt
 ### Deployment ###
 run the app with 
 ```
-flask run
+$ flask run
 ```
 The app should now be running at localhost port 5000
 
