@@ -63,9 +63,9 @@ The app should now be running at localhost port 5000
 VSCode and Github Desktop
 
 ### Authors ###
-Anfernee Alviar
-Jakob Kuriata
-Timothy Pye
+[Anfernee Alviar (22886082)](https://github.com/anferneealviar99)
+[Jakob Kuriata (23278189)](https://github.com/jakobdorian)
+[Timothy Pye (22708266)](https://github.com/timpye)
 
 # Resources
 https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world

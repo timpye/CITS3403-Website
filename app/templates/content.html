@@ -2,37 +2,37 @@
 
 {% block content %}
     <h1>Content</h1>
-    <img class="pc_sideview" src='static\images\pc_sideview.png' alt="PC Sideview">
+    <img class="pc_sideview" src='static/images/pc_sideview.png' alt="PC Sideview">
 
     <div class = 'container-fluid' onload = "showContentList">
         <div class = "content_block" id="CPU">
             <a href="{{ url_for('cpu') }}"><h1>CPU (Computer Processing Unit)</h1></a>
-            <img class='img-responsive' src = 'static\images\CPU.jpg' alt="CPU (Central Processing Unit">
+            <img class='img-responsive' src = 'static/images/CPU.jpg' alt="CPU (Central Processing Unit">
         </div>
         <div class = "content_block" id="motherboard">
             <a href="{{ url_for('motherboard') }}"><h1>Motherboard</h1></a>
-            <img class='img-responsive' src = 'static\images\motherboard.jpg' alt="Motherboard">
+            <img class='img-responsive' src = 'static/images/motherboard.jpg' alt="Motherboard">
         </div>
         <div class = "content_block" id="GPU">
             <a href="{{ url_for('gpu') }}"><h1>GPU (Graphical Processing Unit)</h1></a>
-            <img class='img-responsive' src = 'static\images\GPU.jpg' alt="GPU (Graphical Processing Unit)">
+            <img class='img-responsive' src = 'static/images/GPU.jpg' alt="GPU (Graphical Processing Unit)">
         </div>
         <div class = "content_block" id="RAM">
             <a href="{{ url_for('ram') }}"><h1>RAM (Random Access Memory)</h1></a>
-            <img class='img-responsive' src = 'static\images\RAM.jpg' alt="RAM (Random Access Memory)">
+            <img class='img-responsive' src = 'static/images/RAM.jpg' alt="RAM (Random Access Memory)">
         </div>
         <div class = "content_block" id="Storage">
             <a href="{{ url_for('storage') }}"><h1>Storage</h1></a>
-            <img class='img-responsive' src = 'static\images\NVME_SSD.jpg' alt="Storage">
+            <img class='img-responsive' src = 'static/images/NVME_SSD.jpg' alt="Storage">
         </div>
         <div class = "content_block" id="Peripheral">
             <a href="{{ url_for('peripheral') }}"><h1>Peripheral</h1></a>
-            <img class='img-responsive' src = 'static\images\Mouse.jpg' alt="Mouse">
-            <img class='img-responsive' src = 'static\images\Keyboard.jpg' alt="Keyboard">
+            <img class='img-responsive' src = 'static/images/Mouse.jpg' alt="Mouse">
+            <img class='img-responsive' src = 'static/images/Keyboard.jpg' alt="Keyboard">
         </div>
         <div class = "content_block" id="Power_Supply">
             <a href="{{ url_for('psu') }}"><h1>Power Supply</h1></a>
-            <img class='img-responsive' src = 'static\images\Power_supply.jpg'>
+            <img class='img-responsive' src = 'static/images/Power_supply.jpg' alt="Power Supply">
         </div>
     </div>
 
