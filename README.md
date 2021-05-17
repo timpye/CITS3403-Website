@@ -1,5 +1,5 @@
 # CITS3403 Project 1 Website
-Computing Building 101
+Computer Parts 101
 
 # Description 
 This is our group project submission for CITS3403 Agile Web Development.
