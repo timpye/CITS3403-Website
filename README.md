@@ -8,7 +8,29 @@ The purpose of our project is to develop a web-based platform, where users learn
 desktop computers. Users are able to learn about this through our content page where they will learn the essentials of each component used
 to build a computer. Users are then prompted to take a quiz to access their knowledge and what they have learnt.
 
-# How to get started 
+# How to get started
+The following instructions will teach you how to get a clone of this project up and running on your own system. 
+
+## Prerequisites ##
+First you must install the latest version of Python which is currently 3.9.5.
+
+### Windows ###
+You must download and install the executable from [here](https://www.python.org/downloads/)
+
+### Mac ### 
+If you have homebrew installed you can type the following into your terminal.
+```
+$ brew install python3
+```
+### Linux ###
+Type the following into your terminal.
+```
+$ sudo apt-get install python3.9
+```
+
+## Installation ##
+
+
 
 # Resources
 https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world
